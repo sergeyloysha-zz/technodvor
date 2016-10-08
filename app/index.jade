@@ -1,0 +1,56 @@
+extends templates/base
+
+block content
+  include templates/header
+  section.intro
+    ul.intro__list
+      li.intro__item
+        .intro__slide
+          img.intro__image(src='images/intro_1.png')
+          .intro__content
+            .container
+              .intro__text Мы предлагаем<br/>современную и<br/>надежную технику
+      li.intro__item
+        .intro__slide
+          img.intro__image(src='images/intro_2.png')
+          .intro__content
+            .container
+              .intro__text Мы предлагаем<br/>современную и<br/>надежную технику
+      li.intro__item
+        .intro__slide
+          img.intro__image(src='images/intro_3.png')
+          .intro__content
+            .container
+              .intro__text Мы предлагаем<br/>современную и<br/>надежную технику
+    .intro__info
+      .container
+        .row
+          .col-md-4
+            img(src="images/intro_image.png").intro__info-img
+          .col-md-8
+            h3 Добро пожаловать на страницу ООО «Технодвор»! 
+            p Мы с уважением относимся к Вашим потребностям и стараемся оптимизировать Ваши технологические процессы с помощью наших продукции и услуг.<br/>Компания «Технодвор» является поставщиком качественных решений для бизнеса в области сельскохозяйственной, автомобильной и специальной техники в сфере тяжелой и легкой промышленности. Наравне с продажей техники и оборудования мы оказываем консультационные и посреднические услуги. Опыт наших сотрудников в профессиональной области составляет больше 15 лет.
+            .align-right
+              a.btn.btn_gt(href="#") Далее о компании
+  section.products-home
+    .container
+      .row
+        .col-md-12
+          a(href="#")
+            h3.bordered.link Акции и спецпредложения
+          ul.products-home__list
+            li.products-home__item
+              a.product-home.product-home_0.product-home_down
+            li.products-home__item
+              a.product-home.product-home_1.product-home_up
+            li.products-home__item
+              a.product-home.product-home_2.product-home_down
+            li.products-home__item
+              a.product-home.product-home_3.product-home_up
+            li.products-home__item
+              a.product-home.product-home_4.product-home_down
+          .align-right
+            a.btn.btn_gt(href="#") Перейти к товарам
+  include templates/offers
+  include templates/partners
+  include templates/footer

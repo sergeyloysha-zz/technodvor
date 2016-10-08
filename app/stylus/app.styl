@@ -1,0 +1,666 @@
+@import '_normalize'
+@import "_flexboxgrid.css"
+@import "_owl.carousel.css"
+@import "_owl.theme.css"
+
+font-base = 'Open Sans', Helvetica, Arial, sans-serif
+font-default = 'Open Sans'
+font-condensed = 'Open Sans Condensed'
+font-content = 'Capitolina Light'
+
+size-font = 1.4rem
+size-line = 1.8rem
+
+size-s = 768px
+size-m = 1024px
+size-l = 1190px
+
+color-main = rgb(0, 46, 46)
+color-main-light = rgb(0, 51, 51)
+color-light = rgb(228, 239, 242)
+color-dark = rgb(102, 133, 133)
+color-black = rgb(0, 0, 0)
+color-white = rgb(255, 255, 255)
+color-green = #498f43
+color-blue = rgb(68, 136, 255)
+color-gray = rgb(178, 178, 178)
+
+mediaMin(minWidth)
+  @media screen and (min-width: minWidth)
+    {block}
+mediaBetween(minWidth, maxWidth)
+  @media screen and (min-width: minWidth) and (max-width: maxWidth)
+    {block}
+
+*
+  &
+  &:before
+  &:after
+    box-sizing border-box
+  &:active
+    -webkit-tap-highlight-color: alpha(color-white, 0)
+
+::selection
+  background alpha(color-main, 0.05)
+
+input
+textarea
+  appearance none
+  &:focus
+    outline 0
+
+html
+  font-size 62.5%
+  background color-white
+  text-rendering optimizeLegibility
+  -webkit-font-smoothing antialiased
+  -moz-osx-font-smoothing grayscale
+
+body
+  position relative
+  font 400 size-font/size-line font-base
+  color color-main
+  min-width 111.7rem
+
+a
+a:link
+a:active
+a:visited
+  text-decoration none
+
+h3
+  font-size 2.2rem
+  line-height 3.6rem
+  margin 0 0 1.5rem 0
+  font-weight 400
+  transition color .15s ease-out
+  color color-main
+
+  &.link
+    cursor pointer
+    &:hover
+      color color-green
+
+  &.bordered
+    border-bottom 1px solid alpha(color-black, .3)
+
+  &.green
+    color color-green
+    &.bordered
+      border-bottom 1px solid alpha(color-green, .3)
+
+h4
+  font-size 1.6rem
+
+p
+  font-size 1.6rem
+  line-height 2.4rem
+  color #3c4d5e
+  font-weight 300
+
+.align-right
+  text-align right
+
+.container
+  width 111.7rem !important
+
+.header
+  background color-white
+
+  &__inner
+    padding 0 4rem
+    display flex
+    align-items center
+
+  &__nav
+    margin-left auto
+
+  &__sep
+    width 1px
+    height 2rem
+    background alpha(#3c4d5f, .15)
+    margin 0 1rem
+
+.nav
+  &__list
+    margin 0
+    padding 0
+    list-style none
+    display flex
+
+  &__item
+    margin 0 3rem
+
+  &__link
+    display block
+    font-size 1.2rem
+    line-height 2rem
+    padding 3rem 0
+    text-transform uppercase
+    letter-spacing 0.1rem
+    color alpha(#3c4d5f, 0.9)
+    box-shadow: inset 0 -0rem 0 0 color-green
+    transition box-shadow .15s ease-out, color .15s ease-out
+    cursor pointer
+
+    &:hover
+    &_active
+      box-shadow: inset 0 -0.4rem 0 0 color-green
+      color color-green
+
+.logo
+  display block
+
+  &__src
+    display block
+
+.page-head
+  width 100%
+  padding-top 13%
+  background #ececec
+  background-position center
+  background-size cover
+
+  &_about-us
+    background-image url('../images/pages/about_image.png')
+
+  &_contacts
+    background-image url('../images/pages/contacts_image.png')
+
+  &_products
+    background-image url('../images/pages/products_image.png')
+
+  &_services
+    background-image url('../images/pages/services_image.png')
+
+.page
+  padding 5rem 0
+
+.about-us
+
+  &__intro
+    padding-right 2rem
+
+  &__content
+    padding 3rem 0
+  &__service
+    width 100%
+    line-height 4rem
+    text-align center
+    color color-white
+    font-weight 400
+    background url('../images/green_background.png') center no-repeat
+    background-size cover
+
+  &__side
+    background #f7f8f9
+    padding 2rem
+    margin-bottom 4rem
+
+    &-text
+      margin-top 5rem
+      max-width 70%
+
+    &_services
+    &_contacts
+      position relative
+
+    &_services
+    &_contacts
+      &:before
+        content ' '
+        position absolute
+        opacity 0.4
+        top 2rem
+        right 2rem
+
+    &_services
+      &:before
+        width 67px
+        height 67px
+        background url('../images/icons/about-us_services.png') center no-repeat
+
+    &_contacts
+      &:before
+        width 60px
+        height 38px
+        background url('../images/icons/about-us_contacts.png') center no-repeat
+
+.partners
+  padding 1.5rem 0
+
+  &__slide
+    display flex
+    align-items center
+    justify-content center
+    height 8rem
+    img
+      max-width 90%
+      filter grayscale(100%)
+      opacity 0.5
+      transition filter .15s ease-out, opacity .15s ease-out
+
+      &:hover
+        filter grayscale(0%)
+        opacity 1
+
+  .owl-buttons
+    position absolute
+    z-index 4
+    top 50%
+    left 50%
+    width 100%
+    height 48px
+    transform translate(-50%, -50%)
+    pointer-events none
+
+  .owl-next
+  .owl-prev
+    position absolute
+    top 0
+    display block
+    width 22px
+    height 48px
+    pointer-events auto
+    opacity 0.5
+    transition opacity 0.15s
+
+    &:hover
+      opacity 0.8
+
+  .owl-prev
+    left -4rem
+    background-image url('../images/icons/partners-slider_arrow.png')
+    background-repeat no-repeat
+    background-position 50%
+    background-size contain
+    transform rotate(180deg)
+
+  .owl-next
+    right -4rem
+    background-image url('../images/icons/partners-slider_arrow.png')
+    background-repeat no-repeat
+    background-position 50%
+    background-size contain
+
+.offers
+  position relative
+
+  &:after
+    content ' '
+    position absolute
+    top 60%
+    right 0
+    bottom 0
+    left 0
+    background #f7f8f9
+    z-index -1
+
+  &__list
+    position relative
+    margin 2rem 0 0 0
+    padding 0
+    list-style none
+
+  &__item
+    padding 1.5rem
+
+.offer
+  display block
+  width 100%
+  padding-bottom: 40%
+  box-shadow 0 0 1.5rem alpha(color-black, 0.2)
+  transition box-shadow .15s ease-out
+  background-size cover
+  background-repeat no-repeat
+  background-position center
+  cursor pointer
+
+  &:hover
+    box-shadow 0 0 1.5rem alpha(color-black, 0.4)
+
+  &__title
+    width 100%;
+    background color-white
+    padding 1rem
+    font-size 1.8rem
+
+  &__sale
+    display inline-block
+    padding 1rem 2rem 1rem 1rem
+    color color-white
+    font-size 1.4rem
+    background alpha(#d11b11, .8)
+
+.footer
+  position relative
+  background-image url('../images/footer_background.png')
+  background-repeat no-repeat
+  background-attachment fixed
+  background-position center
+  background-size cover
+  color alpha(color-white, .6)
+
+  &:after
+    content ' '
+    position absolute
+    top 0
+    left 0
+    right 0
+    bottom 0
+    background alpha(color-black, 0.4)
+    z-index 1
+
+  & > *
+    position relative
+    z-index 2
+
+  &__form
+    margin 4rem 0 10rem 0
+
+    &-title
+      font-size 1.8rem
+      line-height 3.4rem
+      font-weight 300
+      text-align center
+      border-bottom 1px solid alpha(color-white, .2)
+      margin 0 0 3rem 0
+
+  &__contacts
+    background alpha(color-black, 0.2)
+    padding 3rem 0
+    border-top 1px solid alpha(color-white, 0.2)
+
+  &__icon
+    display inline-block
+    float left
+    margin-right 2rem
+    width 30px
+    height 30px
+    background-position center
+    background-repeat no-repeat
+
+    &_phone
+      background-image url('../images/icons/icon-phone-w.png')
+    &_address
+      background-image url('../images/icons/icon-address-w.png')
+    &_time
+      background-image url('../images/icons/icon-time-w.png')
+
+  &__map
+    display block
+    width 100%
+    height auto
+
+  &__copy
+    font-size 1.2rem
+    padding 1rem 0
+
+    &-inner
+      display flex
+      justify-content space-between
+      align-items center
+
+    & a
+      color alpha(color-white, .6)
+      border-bottom 1px solid alpha(color-white, .6)
+      text-transform uppercase
+
+      &:hover
+        color color-white
+        border-bottom 1px solid color-white
+
+
+.contacts-form
+  &__fieldset
+    margin 0 0 1rem 0
+    padding 0
+    border 0
+
+  & input[type="text"]
+  & textarea
+    width 100%
+    border 1px solid alpha(color-white, .3)
+    background-color alpha(color-white, .3)
+    color color-white
+    padding 1rem
+    transition border-color .15s ease-out, background-color .15s ease-out
+
+    &:focus
+      border-color color-white
+      background-color alpha(color-white, .5)
+
+  &__input
+    padding-left 5rem !important
+    background-position 1.5rem center
+    background-repeat no-repeat
+
+    &-name
+      background-image url('../images/icons/form-name.png')
+    &-email
+      background-image url('../images/icons/form-email.png')
+    &-phone
+      background-image url('../images/icons/form-phone.png')
+    &-subject
+      background-image url('../images/icons/form-subject.png')
+
+.btn
+  display inline-block
+  border 0
+  font-size 1.2rem
+  line-height 2rem
+  padding 0.5rem 2rem
+  background transparent
+  color color-white
+  cursor pointer
+  transition all .15s ease-out
+  min-width 10rem
+  text-align center
+
+  &_transparent
+    border 1px solid color-white
+    color color-white
+
+    &:hover
+      background alpha(color-white, .2)
+
+  &_green
+    background #467d4e
+
+    &:hover
+      background #498f43
+
+  &_gt
+    color color-green
+    border 1px solid alpha(color-green, .2)
+
+    &:hover
+      background #467d4e
+      border-color #467d4e
+      color color-white
+
+.search
+  position relative
+
+  &_open
+    .search__form
+      opacity 1
+      visibility visible
+
+  &__form
+    opacity 0
+    visibility hidden
+    position absolute
+    display flex
+    top 0
+    right 0
+    height 4rem
+    box-shadow: inset 0 -0.1rem 0 0 alpha(#3c4d5f, .6)
+    background color-white
+    transition all .15s ease-out
+
+    &:hover
+      box-shadow: inset 0 -0.2rem 0 0 alpha(#3c4d5f, .6)
+
+  &__input
+    width 35rem
+    border 0
+    padding 1rem 1rem 1rem 4rem
+    background url('../images/icons/icon-search.png') 0 center no-repeat
+    font-size 1.8rem
+    line-height 2rem
+
+  &__close
+    display block
+    width 4rem
+    height 4rem
+    background url('../images/icons/icon-close.png') center no-repeat
+    cursor pointer
+
+  &__open
+    display block
+    width 4rem
+    height 4rem
+    background url('../images/icons/icon-search.png') center no-repeat
+    cursor pointer
+
+
+
+.lang
+  position relative
+  text-transform uppercase
+  font-size 1.2rem
+
+  &_open
+    .lang__cunt
+      transform rotate(180deg)
+
+    .lang__list
+      opacity 1
+      visibility visible
+
+  &__open
+    display flex
+    padding 0.5rem
+    align-items center
+    cursor pointer
+
+  &__title
+    letter-spacing 0.1rem
+    margin-right 0.5rem
+
+  &__cunt
+    width 10px
+    height 6px
+    background url('../images/icons/icon-cunt.png') center no-repeat
+    transition transform .15s ease-out
+
+  &__list
+    opacity 0
+    visibility hidden
+    position absolute
+    margin 0
+    padding 0
+    list-style none
+    background color-white
+    padding 0.5rem
+    left 0
+    right 0
+    transition all .15s ease-out
+
+  &__link
+    color alpha(#3c4d5f, .6)
+    transition color .15s ease-out
+
+    &:hover
+      color alpha(#3c4d5f, 1)
+
+.intro
+  &__list
+    margin 0
+    padding 0
+    list-style none
+
+  &__item
+    width 100%
+
+  &__slide
+    width 100%
+
+  &__image
+    display block
+    width 100%
+    max-width 100%
+
+  &__content
+    position absolute
+    top 20%
+    left 0
+    right 0
+
+  &__text
+    font-size 3.5rem
+    line-height 4rem
+    text-shadow 0 0 0.5rem alpha(color-black, 0.15)
+    color alpha(color-white, .7)
+    text-transform uppercase
+    font-weight 300
+
+  & .owl-controls
+    position absolute
+    top 85%
+    left 0
+    right 0
+
+  & .owl-controls .owl-page span
+    background color-white
+
+  &__info
+    margin-bottom 4rem
+
+.products-home
+  padding 4rem 0
+
+  &__list
+    margin 5rem 0 0 0
+    padding 0
+    list-style none
+    display flex
+    justify-content center
+    align-items center
+
+  &__item
+    height 30rem
+
+.product-home
+  position relative
+  display block
+  width 17rem
+  height 20rem
+  background-position center
+  background-repeat no-repeat
+  transition transform .15s ease-out
+  cursor pointer
+
+  &_0
+    top 5rem
+    background-image url('../images/icons/type_0.png')
+  &_1
+    top 2rem
+    background-image url('../images/icons/type_1.png')
+  &_2
+    top 5.5rem
+    background-image url('../images/icons/type_2.png')
+  &_3
+    top 1.3rem
+    background-image url('../images/icons/type_3.png')
+  &_4
+    top 5.5rem
+    background-image url('../images/icons/type_4.png')
+
+  &_up
+    &:hover
+      transform translateY(-2rem)
+  &_down
+    &:hover
+      transform translateY(2rem)

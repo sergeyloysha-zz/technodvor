@@ -1,0 +1,30 @@
+header.header
+  .header__inner
+    a.header__logo.logo(href='#')
+      img(src="images/logo.svg").logo__src
+    nav.header__nav.nav
+      ul.nav__list
+        li.nav__item
+          a.nav__link.nav__link_active Главная
+        li.nav__item
+          a.nav__link О нас
+        li.nav__item
+          a.nav__link Товары
+        li.nav__item
+          a.nav__link Услуги
+        li.nav__item
+          a.nav__link Контакты
+    .header__search.search
+      a.search__open
+      form.search__form
+        input(type="text", placeholder="Что вы ищите?").search__input
+        a.search__close
+    .header__sep
+    .header__lang.lang
+      .lang__open
+        .lang__title RU
+        .lang__cunt
+      ul.lang__list
+        li.lang__item
+          a.lang__link(href="#") EN
+    
