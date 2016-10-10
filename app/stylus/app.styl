@@ -750,10 +750,6 @@ strong
 .search
   display none
   position relative
-  margin-left auto
-
-  +mediaMin(size-sm)
-    display block
 
   &_open
     .search__form
@@ -1640,6 +1636,9 @@ strong
 
 .mobile-nav
 
+  +mediaMin(size-sm)
+    display none
+
   &_first
     margin-left auto
 
@@ -1692,7 +1691,7 @@ strong
 
   &__menu
     &-list
-      //display none
+      display none
       position absolute
       top 100%
       left 0
