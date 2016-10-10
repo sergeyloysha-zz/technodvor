@@ -4091,3 +4091,21 @@ strong {
 .pagination__link_active {
   border-color: #498f43;
 }
+.review {
+  width: 100%;
+  max-width: 30rem;
+  margin: 0 auto;
+  padding: 10rem 0;
+}
+.review li {
+  margin: 0 0 1rem 0;
+}
+.review a {
+  color: #3c4d5f;
+  border-bottom: 1px solid #3c4d5f;
+  transition: all 0.15s;
+}
+.review a:hover {
+  color: rgba(60,77,95,0.7);
+  border-bottom: 1px solid rgba(60,77,95,0.3);
+}
