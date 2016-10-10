@@ -1778,3 +1778,56 @@ strong
 
   &:hover
     opacity 1
+
+.pagination
+  display flex
+  align-items center
+  font-size 1.4rem
+
+  &_list
+    padding 0 1.5rem 4rem 1.5rem
+
+    +mediaMin(size-md)
+      padding 0 1.5rem 4rem 4rem
+
+  &__prev
+  &__next
+    display none
+    color #3c4d5f
+    cursor pointer
+
+    +mediaMin(size-md)
+      display block
+
+    &:hover
+      color alpha(#3c4d5f, 0.7)
+
+  &__prev
+    margin-right 1rem
+
+  &__next
+    margin-left 1rem
+
+  &__items
+    display flex
+    align-items center
+
+  &__item
+    margin 0 0.2rem
+
+  &__sep
+    margin 0 1rem
+
+  &__link
+    display flex
+    align-items center
+    justify-content center
+    padding 0.5rem 1.2rem
+    border 2px solid #eee
+    color color-main
+    cursor pointer
+    transition all .15s
+
+    &:hover
+    &_active
+      border-color color-green
