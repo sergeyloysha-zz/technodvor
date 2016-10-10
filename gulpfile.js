@@ -80,7 +80,7 @@ gulp.task('default', ['stylus', 'templates', 'js', 'fonts', 'images'], function 
 
     browserSync({server: destinations.server});
 
-    gulp.watch('./app/stylus/*.styl', ['stylus']);
+    gulp.watch('./app/stylus/*.*', ['stylus']);
     gulp.watch(sources.templates, ['jade-watch']);
     gulp.watch('./app/*.jade', ['jade-watch']);
     gulp.watch('./app/js/**/*.js', ['js']);

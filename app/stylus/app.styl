@@ -1,5 +1,5 @@
 @import '_normalize'
-@import "_flexboxgrid.css"
+@import 'grid.css'
 @import "_owl.carousel.css"
 @import "_owl.theme.css"
 
@@ -8,14 +8,15 @@ font-default = 'Open Sans'
 font-condensed = 'Open Sans Condensed'
 font-content = 'Capitolina Light'
 
-size-font = 1.4rem
-size-line = 1.8rem
+size-font = 1.6rem
+size-line = 1.4
 
-size-s = 768px
-size-m = 1024px
-size-l = 1190px
+size-xs = 544px
+size-sm = 768px
+size-md = 992px
+size-lg = 1200px
 
-color-main = rgb(0, 46, 46)
+color-main = alpha(#3c4d5f, .7)
 color-main-light = rgb(0, 51, 51)
 color-light = rgb(228, 239, 242)
 color-dark = rgb(102, 133, 133)
@@ -60,7 +61,6 @@ body
   position relative
   font 400 size-font/size-line font-base
   color color-main
-  min-width 111.7rem
 
 a
 a:link
@@ -81,47 +81,77 @@ h3
     &:hover
       color color-green
 
-  &.bordered
-    border-bottom 1px solid alpha(color-black, .3)
-
-  &.green
-    color color-green
-    &.bordered
-      border-bottom 1px solid alpha(color-green, .3)
-
 h4
-  font-size 1.6rem
+  font-size 1.8rem
+  font-weight 400
+  margin 0 0 1.5rem 0
+
+h5
+  position relative
+  font-size 1.4rem
+  line-height 2rem
+  font-weight 400
+  color alpha(#3c4d5f, .8)
+  padding 0 0 0.5rem 0
+  margin 0 0 1rem 0
+
+  &:after
+    content ' '
+    position absolute
+    width 3rem
+    height 0.2rem
+    top 100%
+    left 0
+    background alpha(color-green, .5)
 
 p
-  font-size 1.6rem
-  line-height 2.4rem
-  color #3c4d5e
   font-weight 300
+  margin 1.5rem 0
+
+strong
+  font-weight 700
+
+&.bordered
+  border-bottom 1px solid alpha(color-black, .3)
+
+&.green
+  color color-green
+  &.bordered
+    border-bottom 1px solid alpha(color-green, .3)
 
 .align-right
   text-align right
 
-.container
-  width 111.7rem !important
-
 .header
+  position relative
   background color-white
 
   &__inner
-    padding 0 4rem
+    padding 0 1.5rem
     display flex
     align-items center
+
+    +mediaMin(size-md)
+      padding 0 4rem
 
   &__nav
     margin-left auto
 
   &__sep
+    display none
     width 1px
     height 2rem
     background alpha(#3c4d5f, .15)
     margin 0 1rem
 
+    +mediaMin(size-md)
+      display block
+
 .nav
+  display none
+
+  +mediaMin(size-sm)
+    display block
   &__list
     margin 0
     padding 0
@@ -129,7 +159,13 @@ p
     display flex
 
   &__item
-    margin 0 3rem
+    margin 0 0.5rem
+
+    +mediaMin(size-sm)
+      margin 0 1rem
+
+    +mediaMin(size-lg)
+      margin 0 3rem
 
   &__link
     display block
@@ -153,6 +189,13 @@ p
 
   &__src
     display block
+    width 16.2rem
+    height 4rem
+
+    +mediaMin(size-sm)
+      width 24.4rem
+      height 6rem
+
 
 .page-head
   width 100%
@@ -174,7 +217,55 @@ p
     background-image url('../images/pages/services_image.png')
 
 .page
-  padding 5rem 0
+  padding 2rem 0
+
+  +mediaMin(size-md)
+    padding 5rem 0
+
+  &_nopadding
+    padding 0
+
+  &__services
+    padding-top 2rem
+
+  &__contacts
+    padding-top 0
+
+    &-contacts
+      padding 2rem 0
+      background alpha(#b3bdc8, .1)
+      color alpha(#3c4d5f, .7)
+      margin-bottom 4rem
+
+      +mediaMin(size-md)
+        padding 3rem 0
+
+      &-item
+        padding-top 1rem
+        padding-bottom 1rem
+
+        +mediaMin(size-md)
+          padding-top 0
+          padding-bottom 0
+
+      table
+        margin 0 auto
+
+        +mediaMin(size-md)
+          margin 0
+
+    &-form
+      background alpha(#b3bdc8, .1)
+      padding 3rem 1.5rem
+
+      +mediaMin(size-md)
+        padding 3rem 5rem
+
+    .bordered
+      text-align center
+
+      +mediaMin(size-sm)
+        text-align left
 
 .about-us
 
@@ -185,12 +276,15 @@ p
     padding 3rem 0
   &__service
     width 100%
-    line-height 4rem
-    text-align center
+    padding 0.7rem 1.5rem
+    text-align left
     color color-white
     font-weight 400
     background url('../images/green_background.png') center no-repeat
     background-size cover
+
+    +mediaMin(size-sm)
+      text-align center
 
   &__side
     background #f7f8f9
@@ -229,6 +323,15 @@ p
 .partners
   padding 1.5rem 0
 
+  &__list
+    display none
+    margin 0
+    padding 0 2rem
+    list-style none
+
+    +mediaMin(size-sm)
+      padding 0 3rem
+
   &__slide
     display flex
     align-items center
@@ -244,40 +347,50 @@ p
         filter grayscale(0%)
         opacity 1
 
+  .owl-controls
+    padding 0
+
   .owl-buttons
     position absolute
     z-index 4
     top 50%
     left 50%
     width 100%
-    height 48px
+    height 24px
     transform translate(-50%, -50%)
     pointer-events none
+
+    +mediaMin(size-sm)
+      height 48px
 
   .owl-next
   .owl-prev
     position absolute
     top 0
     display block
-    width 22px
-    height 48px
+    width 11px
+    height 24px
     pointer-events auto
     opacity 0.5
     transition opacity 0.15s
+
+    +mediaMin(size-sm)
+      width 22px
+      height 48px
 
     &:hover
       opacity 0.8
 
   .owl-prev
-    left -4rem
+    left 0rem
     background-image url('../images/icons/partners-slider_arrow.png')
     background-repeat no-repeat
-    background-position 50%
+
     background-size contain
     transform rotate(180deg)
 
   .owl-next
-    right -4rem
+    right 0rem
     background-image url('../images/icons/partners-slider_arrow.png')
     background-repeat no-repeat
     background-position 50%
@@ -297,10 +410,74 @@ p
     z-index -1
 
   &__list
+    display none
     position relative
     margin 2rem 0 0 0
-    padding 0
+    padding 0 3rem
     list-style none
+
+    +mediaMin(size-sm)
+      padding 0
+
+    .owl-pagination
+      display none
+
+      +mediaMin(size-sm)
+        display block
+        padding-bottom 0.8rem
+
+    .owl-buttons
+      +mediaMin(size-sm)
+        display none
+
+    .owl-controls
+      padding 0
+
+    .owl-buttons
+      position absolute
+      z-index 4
+      top 50%
+      left 50%
+      width 100%
+      height 24px
+      transform translate(-50%, -50%)
+      pointer-events none
+
+      +mediaMin(size-sm)
+        height 48px
+
+    .owl-next
+    .owl-prev
+      position absolute
+      top 0
+      display block
+      width 11px
+      height 24px
+      pointer-events auto
+      opacity 0.5
+      transition opacity 0.15s
+
+      +mediaMin(size-sm)
+        width 22px
+        height 48px
+
+      &:hover
+        opacity 0.8
+
+    .owl-prev
+      left 0rem
+      background-image url('../images/icons/partners-slider_arrow.png')
+      background-repeat no-repeat
+
+      background-size contain
+      transform rotate(180deg)
+
+    .owl-next
+      right 0rem
+      background-image url('../images/icons/partners-slider_arrow.png')
+      background-repeat no-repeat
+      background-position 50%
+      background-size contain
 
   &__item
     padding 1.5rem
@@ -356,7 +533,13 @@ p
     z-index 2
 
   &__form
-    margin 4rem 0 10rem 0
+    max-width 48rem
+    width 100%
+    margin 0 auto
+    padding 2rem 1.5rem 4rem 1.5rem
+
+    +mediaMin(size-md)
+      padding 4rem 1.5rem 10rem 1.5rem
 
     &-title
       font-size 1.8rem
@@ -364,33 +547,65 @@ p
       font-weight 300
       text-align center
       border-bottom 1px solid alpha(color-white, .2)
-      margin 0 0 3rem 0
+      margin 0 0 2rem 0
+
+      +mediaMin(size-md)
+        margin 0 0 3rem 0
 
   &__contacts
     background alpha(color-black, 0.2)
     padding 3rem 0
     border-top 1px solid alpha(color-white, 0.2)
+    text-align center
+
+    +mediaMin(size-md)
+      text-align left
+
+    &-item
+      padding-top 1rem
+      padding-bottom 1rem
+
+  table
+    margin 0 auto
+
+    +mediaMin(size-md)
+      margin 0
 
   &__icon
-    display inline-block
-    float left
-    margin-right 2rem
+    display block
     width 30px
     height 30px
     background-position center
     background-repeat no-repeat
+    opacity .7
+
+    margin 0 auto 2rem auto
+
+    +mediaMin(size-md)
+      display inline-block
+      margin 0 2rem 0 0
+      float left
 
     &_phone
       background-image url('../images/icons/icon-phone-w.png')
+      &-dark
+        background-image url('../images/icons/icon-phone-d.png')
     &_address
       background-image url('../images/icons/icon-address-w.png')
+      &-dark
+        background-image url('../images/icons/icon-address-d.png')
     &_time
       background-image url('../images/icons/icon-time-w.png')
+      &-dark
+        background-image url('../images/icons/icon-time-d.png')
 
   &__map
     display block
     width 100%
-    height auto
+    height 22rem
+
+    +mediaMin(size-sm)
+      height auto
 
   &__copy
     font-size 1.2rem
@@ -417,18 +632,27 @@ p
     padding 0
     border 0
 
+    .btn
+      width 100%
+
+      +mediaMin(size-md)
+        width initial
+
   & input[type="text"]
   & textarea
     width 100%
     border 1px solid alpha(color-white, .3)
     background-color alpha(color-white, .3)
     color color-white
-    padding 1rem
+    padding 0.7rem 1rem
     transition border-color .15s ease-out, background-color .15s ease-out
 
     &:focus
       border-color color-white
       background-color alpha(color-white, .5)
+
+  & textarea
+    min-height 9rem
 
   &__input
     padding-left 5rem !important
@@ -437,19 +661,39 @@ p
 
     &-name
       background-image url('../images/icons/form-name.png')
+      &-d
+        background-image url('../images/icons/form-name-d.png')
     &-email
       background-image url('../images/icons/form-email.png')
+      &-d
+        background-image url('../images/icons/form-email-d.png')
     &-phone
       background-image url('../images/icons/form-phone.png')
+      &-d
+        background-image url('../images/icons/form-phone-d.png')
     &-subject
       background-image url('../images/icons/form-subject.png')
+      &-d
+        background-image url('../images/icons/form-subject-d.png')
+
+  &_dark
+    & input[type="text"]
+    & textarea
+      border 1px solid color-white
+      background-color color-white
+      color color-main
+
+      &:focus
+        border-color color-green
+        box-shadow 0 0 8px alpha(color-green, 0.2)
+        background-color color-white
 
 .btn
   display inline-block
   border 0
   font-size 1.2rem
   line-height 2rem
-  padding 0.5rem 2rem
+  padding 0.7rem 2rem
   background transparent
   color color-white
   cursor pointer
@@ -470,6 +714,12 @@ p
     &:hover
       background #498f43
 
+  &_red
+    background #ca1b11
+
+    &:hover
+      background #e21712
+
   &_gt
     color color-green
     border 1px solid alpha(color-green, .2)
@@ -478,9 +728,32 @@ p
       background #467d4e
       border-color #467d4e
       color color-white
+  &_mt
+    color #3c4d5f
+    border 1px solid alpha(#3c4d5f, .3)
+
+    &:hover
+      background #3c4d5f
+      border-color #3c4d5f
+      color color-white
+
+  &_full
+    width 100%
+
+  &_large
+    padding 1.2rem 3rem
+    font-size 1.8rem
+
+  & + &
+    margin 0 0 0 1.5rem
 
 .search
+  display none
   position relative
+  margin-left auto
+
+  +mediaMin(size-sm)
+    display block
 
   &_open
     .search__form
@@ -527,9 +800,13 @@ p
 
 
 .lang
+  display none
   position relative
   text-transform uppercase
   font-size 1.2rem
+
+  +mediaMin(size-sm)
+    display block
 
   &_open
     .lang__cunt
@@ -577,6 +854,7 @@ p
 
 .intro
   &__list
+    display none
     margin 0
     padding 0
     list-style none
@@ -594,23 +872,34 @@ p
 
   &__content
     position absolute
-    top 20%
+    top 1rem
     left 0
-    right 0
+
+    +mediaMin(size-sm)
+      top 20%
+      left 0
+      right 0
 
   &__text
-    font-size 3.5rem
-    line-height 4rem
+    font-size 1.6rem
+    line-height 2.2rem
     text-shadow 0 0 0.5rem alpha(color-black, 0.15)
     color alpha(color-white, .7)
     text-transform uppercase
     font-weight 300
 
+    +mediaMin(size-sm)
+      font-size 3.5rem
+      line-height 4rem
+
   & .owl-controls
     position absolute
-    top 85%
+    top 70%
     left 0
     right 0
+
+    +mediaMin(size-sm)
+      top 85%
 
   & .owl-controls .owl-page span
     background color-white
@@ -618,29 +907,80 @@ p
   &__info
     margin-bottom 4rem
 
+    &-content
+      display flex
+      align-items center
+
+    &-left
+      display none
+
+      +mediaMin(size-sm)
+        display block
+
 .products-home
   padding 4rem 0
 
   &__list
-    margin 5rem 0 0 0
     padding 0
     list-style none
     display flex
     justify-content center
     align-items center
+    flex-wrap wrap
+
+    +mediaMin(size-md)
+      margin 5rem 0 10rem 0
 
   &__item
-    height 30rem
+    height 22rem
+    margin 0 2rem
+
+    +mediaMin(size-md)
+      height auto
+
+    &:nth-child(1)
+      order 1
+      width 100%
+      +mediaMin(size-md)
+        width initial
+    &:nth-child(2)
+      order 4
+      +mediaMin(size-md)
+        order 2
+    &:nth-child(3)
+      order 2
+      +mediaMin(size-md)
+        order 3
+    &:nth-child(4)
+      order 5
+      +mediaMin(size-md)
+        order 4
+    &:nth-child(5)
+      order 3
+      +mediaMin(size-md)
+        order 5
+  .btn
+    width 100%
+
+    +mediaMin(size-sm)
+      width initial
 
 .product-home
   position relative
   display block
-  width 17rem
-  height 20rem
+  width 13rem
+  height 16rem
   background-position center
   background-repeat no-repeat
+  background-size 13rem 16rem
   transition transform .15s ease-out
   cursor pointer
+  margin 0 auto
+
+  +mediaMin(size-md)
+    width 17rem
+    height 20rem
+    background-size 17rem 20rem
 
   &_0
     top 5rem
@@ -660,7 +1000,745 @@ p
 
   &_up
     &:hover
-      transform translateY(-2rem)
+      +mediaMin(size-md)
+        transform translateY(-2rem)
   &_down
     &:hover
-      transform translateY(2rem)
+      +mediaMin(size-md)
+        transform translateY(2rem)
+
+.peoples
+  margin-top 5rem
+
+.people
+  display flex
+  flex-direction column
+  align-items center
+  padding 2rem 0
+
+  +mediaMin(size-sm)
+    align-items flex-start
+    flex-direction row
+
+  &__photo
+    width 17rem
+
+  &__src
+    display block
+    width 100%
+    max-width 17rem
+
+  &__info
+    margin 2rem 0 0 0
+    +mediaMin(size-sm)
+      margin 0 0 0 2rem
+
+  &__job
+    margin-top 0
+
+  &__name
+    font-weight 600
+
+  &__phones
+    font-size 1.6rem
+    font-weight 300
+  &__phone
+    display block
+    margin 0.5rem 0
+
+.service
+  padding 3rem 0
+
+  &__content
+    display flex
+    flex-direction column
+    align-items center
+
+    +mediaMin(size-md)
+      flex-direction row
+
+  &_dark
+    background alpha(#7d8792, .04)
+
+  &__media
+    text-align center
+    +mediaMin(size-md)
+      padding 0 3rem
+
+  &__icon
+    display inline-block
+    max-width 50%
+    margin-bottom 1rem
+
+    +mediaMin(size-sm)
+      max-width 100%
+
+  &__description
+    border-top 1px solid alpha(color-green, 0.3)
+
+    +mediaMin(size-md)
+      border-top 0
+      padding 1rem 3rem
+      min-height 20rem
+    &_left
+      +mediaMin(size-md)
+        border-left 1px solid alpha(color-green, 0.3)
+        padding-right 0
+    &_right
+      +mediaMin(size-md)
+        border-right 1px solid alpha(color-green, 0.3)
+        padding-left 0
+
+    & ul
+      list-style none
+      margin 1.5rem 0
+      padding 0 0 0 6rem
+
+      & li
+        position relative
+        margin 0.5rem 0
+        font-weight 500
+
+        &:before
+          content " "
+          position absolute
+          top 50%
+          left -3.5rem
+          margin-top -0.5rem
+          width 1rem
+          height 1rem
+          background color-green
+          border-radius 50%
+  .order-1
+    order 1
+    +mediaMin(size-md)
+      order 2
+  .order-2
+    order 2
+    +mediaMin(size-md)
+      order 1
+
+.controls
+  margin-bottom 2rem
+
+  +mediaMin(size-md)
+    margin-bottom 5rem
+
+  &_offers
+    margin 1.5rem 0 0 0
+    padding 0 1.5rem
+
+    +mediaMin(size-md)
+      display none
+
+  &__inner
+    display flex
+    align-items center
+    padding 0 0 2rem 0
+    border-bottom 1px solid alpha(color-main, 0.2)
+
+.control-page
+  display flex
+  margin-left auto
+
+  &__item
+    position relative
+    width 4rem
+    height 4rem
+    border 1px solid alpha(color-main, 0.2)
+
+    &:before
+      content ' '
+      position absolute
+      top 50%
+      left 50%
+      width 9px
+      height 13px
+      margin-top -6px
+      margin-left -4px
+      background-position center
+      background-repeat no-repeat
+      opacity .6
+      background-image url('../images/icons/page-control_arrow.png')
+      transition all .15s ease-out
+
+    &_next:before
+      transform rotate(180deg)
+
+    &:hover:before
+      opacity 1
+
+
+.product
+
+  &__control
+    text-align center
+
+    +mediaMin(size-sm)
+      text-align left
+
+  &__name
+    color #3c4d5f
+    text-transform uppercase
+    font-weight 400
+    margin 0 0 1.5rem 0
+    padding-bottom 1.5rem
+    border-bottom 1px solid #eeeeee
+
+  &__details
+    margin-bottom 1.5rem
+    padding-bottom 1.5rem
+    border-bottom 1px solid #eeeeee
+
+  &__detail
+    margin 0.5rem 0
+
+    &-item
+      text-transform uppercase
+      font-size 1.4rem
+      margin-right 0.5rem
+
+    &-value
+      font-size 1.4rem
+      color alpha(#3c4d5f, .9)
+
+      &_green
+        font-weight 600
+        color color-green
+
+      &_red
+        font-weight 600
+        color #f21c1c
+
+  &__sale
+    margin 0 0 1.5rem 0
+    padding-bottom 1.5rem
+    border-bottom 1px solid #eee
+
+    &-title
+      text-transform uppercase
+      color #f21c1c
+      font-weight 600
+
+    &-description
+      font-weight 500
+      font-size 1.5rem
+      color #3c4d5f
+      margin 0.5rem 0 0 0
+
+  &__description
+    margin 0 0 1.5rem
+    padding-bottom 1.5rem
+    border-bottom 1px solid #eee
+    font-size 1.4rem
+
+  &__slider
+    position relative
+    margin-bottom 2rem
+
+    &-sale
+      position absolute
+      top 0
+      left 0
+      background #ca1b11
+      padding 0.5rem 1.5rem
+      color color-white
+      z-index 2
+
+.tabs
+  padding 0
+  margin 2rem 0
+
+  +mediaMin(size-md)
+    margin 5rem 0
+
+  & p
+    font-weight 400
+    color #3c4d5f
+    font-size 1.4rem
+
+.products
+  &__inner
+    width 100%
+    max-width 117rem
+    margin 0 auto
+    display flex
+
+  &__side
+    display none
+    width 30%
+    flex-shrink 0
+    background alpha(#3c4d5f, .05)
+    padding 2rem
+
+    +mediaMin(size-md)
+      display block
+
+  &__content
+    flex 1
+
+  &__filter
+    display flex
+    align-items flex-end
+    border-bottom 1px solid #eee
+    margin-top 1rem
+
+    +mediaMin(size-sm)
+      padding-left 4rem
+
+
+    &-title
+      display none
+      font-size 1.6rem
+      font-weight 600
+      color #3c4d5f
+      margin 0 0 0.5rem 0
+
+      +mediaMin(size-sm)
+        display block
+
+    &-list
+      margin-left auto
+
+.filter-list
+  display flex
+  margin 0 0 0 auto
+  padding 0
+  list-style none
+  width 100%
+
+  +mediaMin(size-sm)
+    width initial
+
+  &__item
+    width 25%
+
+  &__link
+    display flex
+    flex-direction column
+    text-align center
+    cursor pointer
+
+    &:hover
+    &_active
+      .filter-list__icon
+        filter grayscale(0)
+
+  &__title
+    font-size 1.2rem
+    color #3c4d5f
+    font-weight 600
+
+  &__icon
+    width 100%
+    height 7rem
+    border-right 1px solid #eee
+    filter grayscale(100%)
+
+    +mediaMin(size-sm)
+      width 11rem
+
+    &_1
+      background url('../images/icons/filter_1.png') center no-repeat
+      background-size 60%
+    &_2
+      background url('../images/icons/filter_2.png') center no-repeat
+      background-size 50%
+    &_3
+      background url('../images/icons/filter_3.png') center no-repeat
+      background-size 60%
+    &_4
+      background url('../images/icons/filter_4.png') center no-repeat
+      background-size 70%
+
+.offers-list
+  margin 0
+  padding 2rem 1.5rem
+  list-style none
+
+  +mediaMin(size-md)
+    padding 2rem 1.5rem 2rem 4rem
+
+  &__item
+    margin 2rem 0
+
+.products-list
+  margin 0
+  padding 2rem 1.5rem
+  list-style none
+
+  +mediaMin(size-md)
+    padding 2rem 0 2rem 4rem
+
+  &__item
+    border-bottom 1px solid #eee
+    margin-bottom 2rem
+    padding-bottom 2rem
+
+.product-item
+  display flex
+  flex-direction column
+
+  +mediaMin(size-sm)
+    flex-direction row
+
+  &__media
+    position relative
+    flex-shrink 0
+    width 15rem
+    margin 0 auto 2rem auto
+
+    +mediaMin(size-sm)
+      width 20rem
+      margin 0 2rem 0 0
+
+
+  &__sale
+    position absolute
+    top 0
+    left 0
+    background #ca1b11
+    padding 0.5rem 1.5rem
+    color color-white
+    z-index 2
+
+  &__src
+    display block
+    width 100%
+    max-width 100%
+
+  &__title
+    margin 0 0 1rem 0
+    text-align center
+
+    +mediaMin(size-sm)
+      text-align left
+
+    & a
+      color #3c4d5f
+      font-size 1.8rem
+      font-weight 600
+      border-bottom 2px solid #3c4d5f
+      text-transform uppercase
+      transition border-bottom .15s ease-out
+
+      &:hover
+        border-bottom 2px solid alpha(#3c4d5f, .2)
+
+  &__exist
+    color color-green
+    text-align center
+    margin 0 0 1rem 0
+
+    +mediaMin(size-sm)
+      text-align left
+
+  &__controls
+    display flex
+    & .btn
+      width 50%
+      margin 0
+
+      &:first-child
+        margin-right 1rem
+
+      &:last-child
+        margin-left 1rem
+
+    +mediaMin(size-sm)
+      display block
+
+      & .btn
+        width initial
+
+  &__control
+
+    & .btn
+      width 100%
+
+      +mediaMin(size-sm)
+        width initial
+
+  &__description
+    color #3c4d5f
+    font-size 1.4rem
+    font-weight 400
+    margin 0 0 1rem 0
+
+  &__details
+    display flex
+    flex-direction column
+
+  &__additional
+    margin auto 0 1rem 0
+    text-align center
+
+    +mediaMin(size-sm)
+      text-align left
+
+  &__detail
+    margin 0.5rem 0
+
+    &-item
+      text-transform uppercase
+      font-size 1.4rem
+      margin-right 0.5rem
+
+    &-value
+      font-size 1.4rem
+      font-weight 500
+      color #3c4d5f
+
+.side-nav
+  margin 0
+  padding 0
+  list-style none
+
+  &__item
+    margin-bottom 0.4rem
+
+  &__link
+    position relative
+    display block
+    background color-white
+    font-size 1.6rem
+    line-height 2rem
+    color color-main
+    padding 1.25rem 2rem 1.25rem 5rem
+    border-left 1rem solid #3c4d5f
+    transition all .15s ease-out
+    cursor pointer
+
+    &:hover
+    &_active
+      border-color color-green
+      background #3c4d5f
+      color color-white
+
+    &:before
+      content ' '
+      position absolute
+      width 4rem
+      height 4rem
+      top 50%
+      margin-top -2rem
+      left 0.5rem
+      background-position center
+      background-repeat no-repeat
+
+    for num in 1..7
+      &_{num}:before
+        background-image url('../images/icons/nav_' + num + '.png')
+
+      &_{num}:hover:before
+      &_{num}&.side-nav__link_active:before
+        background-image url('../images/icons/nav_' + num + '_w.png')
+
+
+
+.side-subnav
+  margin 1rem 0 1rem 3rem
+  padding 0
+  list-style none
+
+  &__title
+    display inline-block
+    font-size 1.6rem
+    line-height 1.8rem
+    color #3c4d5f
+    border-bottom 1px solid #3c4d5f
+    margin 1rem 0
+
+  &__link
+    position relative
+    font-size 1.4rem
+    color #3c4d5f
+    font-weight 500
+    display block
+    padding 0.4rem 0
+    margin 0 0 0 3rem
+    cursor pointer
+    transition all .15s ease-out
+
+    &:before
+      opacity 0
+      content ' '
+      position absolute
+      left -1.5rem
+      top 0.8rem
+      width 0
+      height 0
+      border-style solid
+      border-width 0.5rem 0 0.5rem 0.8rem
+      border-color transparent transparent transparent color-green
+      transition opacity 0.3s
+
+    &:hover
+    &_active
+      color color-green
+
+      &:before
+        opacity 1
+
+.side-slider
+  margin 4rem 0
+
+  & h3
+    font-size 1.8rem
+    color #3c4d5f
+
+  &__list
+    display none
+    margin 0
+    padding 0
+    list-style none
+
+    .owl-controls
+      padding 0
+
+    .owl-buttons
+      position absolute
+      z-index 4
+      top 50%
+      left 50%
+      width 100%
+      height 24px
+      transform translate(-50%, -50%)
+      pointer-events none
+
+    .owl-next
+    .owl-prev
+      position absolute
+      top 0
+      display block
+      width 11px
+      height 24px
+      pointer-events auto
+      opacity 0.5
+      transition opacity 0.15s
+
+      &:hover
+        opacity 0.8
+
+    .owl-prev
+      left 0rem
+      background-image url('../images/icons/partners-slider_arrow.png')
+      background-repeat no-repeat
+
+      background-size contain
+      transform rotate(180deg)
+
+    .owl-next
+      right 0rem
+      background-image url('../images/icons/partners-slider_arrow.png')
+      background-repeat no-repeat
+      background-position 50%
+      background-size contain
+
+  &__item
+    padding 1rem 2rem
+
+.mobile-nav
+
+  &_first
+    margin-left auto
+
+  &_open
+    .mobile-nav__button
+      background-image url('../images/icons/icon-close.png')
+
+    .mobile-nav__search
+      display block
+    .mobile-nav__menu-list
+      display block
+
+  &__button
+    width 5rem
+    height 5rem
+    background-repeat no-repeat
+    background-position center
+    cursor pointer
+
+    &_search
+      background-image url('../images/icons/icon-search.png')
+
+    &_menu
+      background-image url('../images/icons/icon-menu.png')
+
+  &__search
+    display none
+
+    position absolute
+    top 100%
+    left 0
+    right 0
+    z-index 4
+    background color-white
+    padding 1rem 1.5rem
+    border-top 1px solid #eee
+
+  &__input
+    width 100%
+    border 0
+    border-bottom 1px solid #eee
+
+    padding 1rem 1rem 1rem 4rem
+    background url('../images/icons/icon-search.png') 0 center no-repeat
+    font-size 1.8rem
+    line-height 2rem
+
+    &:focus
+      border-bottom 1px solid #555
+
+  &__menu
+    &-list
+      //display none
+      position absolute
+      top 100%
+      left 0
+      right 0
+      z-index 3
+
+      margin 0
+      padding 0
+      list-style none
+
+    &-item
+      border-bottom 1px solid #eee
+
+    &-link
+      display block
+      border-left 5px solid transparent
+      background #3c4d5f
+      color alpha(color-white, .8)
+      padding 1.5rem
+      text-transform uppercase
+      transition all .15s ease-out
+      cursor pointer
+
+      &:hover
+      &_active
+        border-color color-green
+        color color-white
+
+  &__submenu
+    display none
+    margin 0
+    padding 0
+    list-style none
+
+    &_open
+      display block
+
+    &-item
+      border-bottom 1px solid #eee
+
+    &-link
+      display block
+      border-left 5px solid transparent
+      background color-white
+      color color-main
+      padding 1.5rem
+      text-transform uppercase
+      transition all .15s ease-out
+      cursor pointer

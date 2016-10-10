@@ -1,0 +1,50 @@
+extends templates/base
+
+block content
+  include templates/header
+  section.page-head.page-head_products
+  section.page.page__products.products
+    section.controls
+      .container
+        .controls__inner
+          a.control-back.btn.btn_gt(href="#") Вернуться к категориям
+          .control-page
+            a.control-page__item.control-page__item_prev(href="#")
+            a.control-page__item.control-page__item_next(href="#")
+    section.product
+      .container
+        .row
+          .col-md-6
+            .product__slider
+              .product__slider-sale Акция
+              .fotorama(data-nav="thumbs", data-allowfullscreen="true")
+                a.product__slider-slide(href="//placehold.it/800x600")
+                  span asd
+                  img(src="//placehold.it/800x600")
+                a.product__slider-slide(href="//placehold.it/1000x500")
+                  img(src="//placehold.it/1000x500")
+          .col-md-6
+            .product__info
+              h2.product__name Belarus 1220.6
+              .product__details
+                .product__detail
+                  span.product__detail-item Бренд:
+                  span.product__detail-value Minsk Tractor Works
+                .product__detail
+                  span.product__detail-item Номер продукта:
+                  span.product__detail-value 02551059845
+                .product__detail
+                  span.product__detail-item Наличие:
+                  span.product__detail-value.product__detail-value_green В наличии
+                .product__detail
+                  span.product__detail-item Наличие:
+                  span.product__detail-value.product__detail-value_red Нет в наличии
+              .product__sale
+                span.product__sale-title Акция:
+                p.product__sale-description Предназначен для выполнения различных сельскохозяйственных работ с навесными, полунавесными и прицепными машинами, на транспорте, с погрузочно-разгрузочными средствами, уборочными комплексами и для привода стационарных сельскохозяйственных машин. Предназначен для выполнения различных сельскохозяйственных работ.
+              p.product__description Трактор БЕЛАРУС-1221.2 (4×4) относится к тяговому классу 2,0 с двигателем мощностью 130 л.с. Предназначен для выполнения различных сельскохозяйственных работ с навесными, полунавесными и прицепными машинами, на транспорте, с погрузочно-разгрузочными средствами, уборочными комплексами и для привода стационарных сельскохозяйственных машин. 
+              .product__control
+                a.btn.btn_red.btn_large(href="#") Заказать
+  include templates/offers
+  include templates/partners
+  include templates/footer

@@ -1,0 +1,90 @@
+extends templates/base
+
+block content
+  include templates/header
+  section.page-head.page-head_products
+  section.page.page_nopadding.page__products.products
+    .products__inner
+      aside.products__side
+        ul.side-nav
+          li.side-nav__item
+            a.side-nav__link.side-nav__link_1(href="#") Сельхозтехника
+          li.side-nav__item
+            a.side-nav__link.side-nav__link_2 Спецтехника
+          li.side-nav__item
+            a.side-nav__link.side-nav__link_3 Грузовая техника
+          li.side-nav__item
+            a.side-nav__link.side-nav__link_4 Дополнительное оборудование
+          li.side-nav__item
+            a.side-nav__link.side-nav__link_5 Запчасти
+          li.side-nav__item
+            a.side-nav__link.side-nav__link_6 Двигатели и запчасти к ним
+          li.side-nav__item
+            a.side-nav__link.side-nav__link_active.side-nav__link_7 Акции и спецпредложения
+            
+        section.side-slider
+          h3.bordered Акции и спецпредложения
+          ul.side-slider__list
+            li.side-slider__item
+              .offer(style="background-image: url('images/offers/01.png');")
+                .offer__title Распродажа техники
+                .offer__sale скидка 15%
+            li.side-slider__item
+              .offer(style="background-image: url('images/offers/02.png');")
+                .offer__title Распродажа техники
+                .offer__sale скидка 15%
+            li.side-slider__item
+              .offer(style="background-image: url('images/offers/03.png');")
+                .offer__title Распродажа техники
+                .offer__sale скидка 15%
+            li.side-slider__item
+              .offer(style="background-image: url('images/offers/04.png');")
+                .offer__title Распродажа техники
+                .offer__sale скидка 15%
+            
+      section.products__content
+        section.controls.controls_offers
+          .controls__inner
+            a.control-back.btn.btn_gt(href="#") Вернуться к категориям
+            .control-page
+              a.control-page__item.control-page__item_prev(href="#")
+              a.control-page__item.control-page__item_next(href="#")
+        .offers-list
+          .row
+            .col-md-4.col-sm-6
+              .offer.offers-list__item(style="background-image: url('images/offers/01.png');")
+                .offer__title Распродажа техники
+                .offer__sale скидка 15%
+            .col-md-4.col-sm-6
+              .offer.offers-list__item(style="background-image: url('images/offers/02.png');")
+                .offer__title Распродажа техники
+                .offer__sale скидка 15%
+            .col-md-4.col-sm-6
+              .offer.offers-list__item(style="background-image: url('images/offers/03.png');")
+                .offer__title Распродажа техники
+                .offer__sale скидка 15%
+            .col-md-4.col-sm-6
+              .offer.offers-list__item(style="background-image: url('images/offers/04.png');")
+                .offer__title Распродажа техники
+                .offer__sale скидка 15%
+            .col-md-4.col-sm-6
+              .offer.offers-list__item(style="background-image: url('images/offers/01.png');")
+                .offer__title Распродажа техники
+                .offer__sale скидка 15%
+            .col-md-4.col-sm-6
+              .offer.offers-list__item(style="background-image: url('images/offers/02.png');")
+                .offer__title Распродажа техники
+                .offer__sale скидка 15%
+            .col-md-4.col-sm-6
+              .offer.offers-list__item(style="background-image: url('images/offers/03.png');")
+                .offer__title Распродажа техники
+                .offer__sale скидка 15%
+            .col-md-4.col-sm-6
+              .offer.offers-list__item(style="background-image: url('images/offers/04.png');")
+                .offer__title Распродажа техники
+                .offer__sale скидка 15%
+            .col-md-4.col-sm-6
+              .offer.offers-list__item(style="background-image: url('images/offers/01.png');")
+                .offer__title Распродажа техники
+                .offer__sale скидка 15%
+  include templates/footer
