@@ -44,7 +44,7 @@ block content
                 p.product__sale-description Предназначен для выполнения различных сельскохозяйственных работ с навесными, полунавесными и прицепными машинами, на транспорте, с погрузочно-разгрузочными средствами, уборочными комплексами и для привода стационарных сельскохозяйственных машин. Предназначен для выполнения различных сельскохозяйственных работ.
               p.product__description Трактор БЕЛАРУС-1221.2 (4×4) относится к тяговому классу 2,0 с двигателем мощностью 130 л.с. Предназначен для выполнения различных сельскохозяйственных работ с навесными, полунавесными и прицепными машинами, на транспорте, с погрузочно-разгрузочными средствами, уборочными комплексами и для привода стационарных сельскохозяйственных машин. 
               .product__control
-                a.btn.btn_red.btn_large(href="#") Заказать
+                a.btn.btn_red.btn_large(href="#order") Заказать
         .row
           .col-md-12
             .tabs
@@ -67,4 +67,21 @@ block content
 
   include templates/offers
   include templates/partners
+  .remodal(data-remodal-id='order')
+    button.remodal-close(data-remodal-action='close')
+    .order
+      .order__title Belarus 1220.6
+      form.contacts-form.contacts-form_dark
+        fieldset.contacts-form__fieldset
+          input(type="text", placeholder="Имя*").contacts-form__input.contacts-form__input-name-d
+        fieldset.contacts-form__fieldset
+          input(type="text", placeholder="Email*").contacts-form__input.contacts-form__input-email-d
+        fieldset.contacts-form__fieldset
+          input(type="text", placeholder="Телефон*").contacts-form__input.contacts-form__input-phone-d
+        fieldset.contacts-form__fieldset
+          input(type="text", placeholder="Тема*").contacts-form__input.contacts-form__input-subject-d
+        fieldset.contacts-form__fieldset
+          textarea(placeholder="Ваше сообщение")
+        fieldset.contacts-form__fieldset
+          input(type="submit", value="Отправить").btn.btn_green.btn_full
   include templates/footer

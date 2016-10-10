@@ -748,7 +748,11 @@ strong
     margin 0 0 0 1.5rem
 
 .search
+  display none
   position relative
+
+  +mediaMin(size-sm)
+    display block
 
   &_open
     .search__form
@@ -1746,3 +1750,31 @@ strong
       text-transform uppercase
       transition all .15s ease-out
       cursor pointer
+
+.order
+  text-align left
+  padding 0
+
+  +mediaMin(size-md)
+    padding 5rem
+
+  &__title
+    font-size 2.2rem
+    line-height 2.8rem
+    text-transform uppercase
+    font-weight 600
+    margin-bottom 2rem
+    color color-main
+
+  .btn
+    width 100%
+
+.remodal-close
+  background-position center
+  background-repeat no-repeat
+  background-image url('../images/icons/icon-close.png')
+  opacity 0.5
+  transition opacity .15s
+
+  &:hover
+    opacity 1
