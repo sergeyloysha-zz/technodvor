@@ -2334,7 +2334,6 @@ strong {
   margin: 0 0 0 1.5rem;
 }
 .search {
-  display: none;
   position: relative;
 }
 .search_open .search__form {
@@ -2515,6 +2514,14 @@ strong {
 @media screen and (min-width: 768px) {
   .intro__info-left {
     display: block;
+  }
+}
+.intro__info .btn {
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .intro__info .btn {
+    width: initial;
   }
 }
 .products-home {
