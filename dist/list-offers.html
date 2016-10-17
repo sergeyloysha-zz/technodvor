@@ -5,21 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
     <meta name="description" content="@sergeyloyshaß">
     <meta name="author" content="Sergey Loysha">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:500,600,400,300,700" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="css/app.css">
     <title>Технодвор</title>
   </head>
   <body>
     <header class="header">
-      <div class="header__inner"><a href="#" class="header__logo logo"><img src="images/logo.svg" class="logo__src"></a>
+      <div class="header__inner"><a href="home.html" class="header__logo logo"><img src="images/logo.svg" class="logo__src"></a>
         <nav class="header__nav nav">
           <ul class="nav__list">
-            <li class="nav__item"><a class="nav__link nav__link_active">Главная</a></li>
-            <li class="nav__item"><a class="nav__link">О нас</a></li>
-            <li class="nav__item"><a class="nav__link">Товары</a></li>
-            <li class="nav__item"><a class="nav__link">Услуги</a></li>
-            <li class="nav__item"><a class="nav__link">Контакты</a></li>
+            <li class="nav__item"><a href="home.html" class="nav__link">Главная</a></li>
+            <li class="nav__item"><a href="about-us.html" class="nav__link">О нас</a></li>
+            <li class="nav__item"><a href="list-products.html" class="nav__link">Товары</a></li>
+            <li class="nav__item"><a href="services.html" class="nav__link">Услуги</a></li>
+            <li class="nav__item"><a href="contacts.html" class="nav__link">Контакты</a></li>
           </ul>
         </nav>
         <div class="header__search search"><a class="search__open"></a>
@@ -46,9 +45,9 @@
         <div class="mobile-nav">
           <div class="mobile-nav__button mobile-nav__button_menu"></div>
           <ul class="mobile-nav__menu-list">
-            <li class="mobile-nav__menu-item"><a class="mobile-nav__menu-link mobile-nav__menu-link_active">Главная</a></li>
-            <li class="mobile-nav__menu-item"><a class="mobile-nav__menu-link">О нас</a></li>
-            <li class="mobile-nav__menu-item"><a class="mobile-nav__menu-link">Товары</a>
+            <li class="mobile-nav__menu-item"><a href="home.html" class="mobile-nav__menu-link">Главная</a></li>
+            <li class="mobile-nav__menu-item"><a href="about-us.html" class="mobile-nav__menu-link">О нас</a></li>
+            <li class="mobile-nav__menu-item"><a href="list-products.html" class="mobile-nav__menu-link">Товары</a>
               <ul class="mobile-nav__submenu">
                 <li class="mobile-nav__submenu-item"><a class="mobile-nav__submenu-link">Сельхозтехника</a></li>
                 <li class="mobile-nav__submenu-item"><a class="mobile-nav__submenu-link">Спецтехника</a></li>
@@ -56,8 +55,8 @@
                 <li class="mobile-nav__submenu-item"><a class="mobile-nav__submenu-link">Запчасти</a></li>
               </ul>
             </li>
-            <li class="mobile-nav__menu-item"><a class="mobile-nav__menu-link">Услуги</a></li>
-            <li class="mobile-nav__menu-item"><a class="mobile-nav__menu-link">Контакты</a></li>
+            <li class="mobile-nav__menu-item"><a href="services.html" class="mobile-nav__menu-link">Услуги</a></li>
+            <li class="mobile-nav__menu-item"><a href="contacts.html" class="mobile-nav__menu-link">Контакты</a></li>
             <li class="mobile-nav__menu-item"><a class="mobile-nav__menu-link">RU</a>
               <ul class="mobile-nav__submenu">
                 <li class="mobile-nav__submenu-item"><a class="mobile-nav__submenu-link">EN</a></li>
@@ -199,10 +198,10 @@
             <input type="text" placeholder="Email*" class="contacts-form__input contacts-form__input-email">
           </fieldset>
           <fieldset class="contacts-form__fieldset">
-            <input type="text" placeholder="Телефон*" class="contacts-form__input contacts-form__input-phone">
+            <input type="text" placeholder="Телефон" class="contacts-form__input contacts-form__input-phone">
           </fieldset>
           <fieldset class="contacts-form__fieldset">
-            <input type="text" placeholder="Тема*" class="contacts-form__input contacts-form__input-subject">
+            <input type="text" placeholder="Тема" class="contacts-form__input contacts-form__input-subject">
           </fieldset>
           <fieldset class="contacts-form__fieldset">
             <textarea placeholder="Ваше сообщение"></textarea>
@@ -247,11 +246,11 @@
               <div class="footer__icon footer__icon_time"></div>
               <table>
                 <tr>
-                  <td>по будням:</td>
+                  <td>Пн - Пт:</td>
                   <td>8.00 - 22.00</td>
                 </tr>
                 <tr>
-                  <td>по выходным:</td>
+                  <td>Суб - Вс:</td>
                   <td>8.00 - 22.00</td>
                 </tr>
               </table>

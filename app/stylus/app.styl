@@ -6,7 +6,6 @@
 font-base = 'Open Sans', Helvetica, Arial, sans-serif
 font-default = 'Open Sans'
 font-condensed = 'Open Sans Condensed'
-font-content = 'Capitolina Light'
 
 size-font = 1.6rem
 size-line = 1.4
@@ -16,7 +15,7 @@ size-sm = 768px
 size-md = 992px
 size-lg = 1200px
 
-color-main = alpha(#3c4d5f, .7)
+color-main = #354454
 color-main-light = rgb(0, 51, 51)
 color-light = rgb(228, 239, 242)
 color-dark = rgb(102, 133, 133)
@@ -109,7 +108,7 @@ p
   margin 1.5rem 0
 
 strong
-  font-weight 700
+  font-weight 600
 
 &.bordered
   border-bottom 1px solid alpha(color-black, .3)
@@ -247,6 +246,8 @@ strong
         +mediaMin(size-md)
           padding-top 0
           padding-bottom 0
+          display flex
+          justify-content center
 
       table
         margin 0 auto
@@ -280,11 +281,16 @@ strong
     text-align left
     color color-white
     font-weight 400
+    font-size 1.4rem
     background url('../images/green_background.png') center no-repeat
     background-size cover
 
     +mediaMin(size-sm)
       text-align center
+      font-size 1.2rem
+
+    +mediaMin(size-md)
+      font-size 1.6rem
 
   &__side
     background #f7f8f9
@@ -565,6 +571,10 @@ strong
       padding-top 1rem
       padding-bottom 1rem
 
+      +mediaMin(size-md)
+        display flex
+        justify-content center
+
   table
     margin 0 auto
 
@@ -615,6 +625,23 @@ strong
       display flex
       justify-content space-between
       align-items center
+      flex-direction column
+
+      +mediaMin(size-sm)
+        flex-direction row
+
+      & span:last-child
+        order 1
+        margin-bottom 1rem
+
+        +mediaMin(size-sm)
+          order 2
+          margin-bottom 0
+      & span:first-child
+        order 2
+
+        +mediaMin(size-sm)
+          order 1
 
     & a
       color alpha(color-white, .6)
@@ -652,7 +679,7 @@ strong
       background-color alpha(color-white, .5)
 
   & textarea
-    min-height 9rem
+    min-height 15rem
 
   &__input
     padding-left 5rem !important
@@ -875,21 +902,30 @@ strong
     left 0
 
     +mediaMin(size-sm)
-      top 20%
-      left 0
+      top 15%
       right 0
 
+    +mediaMin(size-md)
+      left 10%
+
+    +mediaMin(size-lg)
+      left 15%
+
   &__text
+    display none
     font-size 1.6rem
     line-height 2.2rem
     text-shadow 0 0 0.5rem alpha(color-black, 0.15)
-    color alpha(color-white, .7)
+    color color-white
     text-transform uppercase
-    font-weight 300
+    font-weight 400
 
     +mediaMin(size-sm)
       font-size 3.5rem
       line-height 4rem
+
+    +mediaMin(size-md)
+      display block
 
   & .owl-controls
     position absolute
@@ -902,6 +938,9 @@ strong
 
   & .owl-controls .owl-page span
     background color-white
+
+    &::before
+      border-color color-white !important
 
   &__info
     margin-bottom 4rem
@@ -938,7 +977,6 @@ strong
 
   &__item
     height 22rem
-    margin 0 2rem
 
     +mediaMin(size-md)
       height auto
@@ -1003,14 +1041,9 @@ strong
     top 5.5rem
     background-image url('../images/icons/type_4.png')
 
-  &_up
-    &:hover
-      +mediaMin(size-md)
-        transform translateY(-2rem)
-  &_down
-    &:hover
-      +mediaMin(size-md)
-        transform translateY(2rem)
+  &:hover
+    +mediaMin(size-md)
+      transform translateY(-2rem)
 
 .peoples
   margin-top 5rem
@@ -1273,8 +1306,9 @@ strong
     display none
     width 30%
     flex-shrink 0
-    background alpha(#3c4d5f, .05)
+    background #fff
     padding 2rem
+    border-right 1px solid #b3bdc8
 
     +mediaMin(size-md)
       display block
@@ -1505,7 +1539,7 @@ strong
   &__link
     position relative
     display block
-    background color-white
+    background #f8f9fb
     font-size 1.6rem
     line-height 2rem
     color color-main

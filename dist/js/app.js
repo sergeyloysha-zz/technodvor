@@ -74,7 +74,9 @@ $(function() {
     itemsMobile : [768,3],
     navigation: true,
     navigationText: ["",""],
-    pagination: false
+    pagination: false,
+    autoPlay: 10000,
+    scrollPerPage: true
   });
 
   $(".offers__list").owlCarousel({
@@ -82,6 +84,8 @@ $(function() {
     navigation: true,
     pagination: true,
     navigationText: ["",""],
+    autoPlay: 10000,
+    scrollPerPage: true
   });
 
   $(".intro__list").owlCarousel({
@@ -97,15 +101,26 @@ $(function() {
     pagination: false,
     transitionStyle: "fade",
     navigationText: ["",""],
+    autoPlay: 5000
   });
 
   $('.search__open').on('click', function(e){
     e.preventDefault();
-    $('.search').addClass('search_open')
+    $('.search').addClass('search_open');
+    if(document.documentElement.clientWidth > 768) {
+      $('.nav__list').css({
+        'visibility': 'hidden'
+      });
+    }
   })
   $('.search__close').on('click', function(e){
     e.preventDefault();
-    $('.search').removeClass('search_open')
+    $('.search').removeClass('search_open');
+    if(document.documentElement.clientWidth > 768) {
+      $('.nav__list').css({
+        'visibility': 'visible'
+      });
+    }
   })
   $('.lang__open').on('click', function(e){
     e.preventDefault();

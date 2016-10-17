@@ -1,7 +1,67 @@
 extends templates/base
 
 block content
-  include templates/header
+  header.header
+    .header__inner
+      a.header__logo.logo(href='home.html')
+        img(src="images/logo.svg").logo__src
+      nav.header__nav.nav
+        ul.nav__list
+          li.nav__item
+            a.nav__link(href="home.html") Главная
+          li.nav__item
+            a.nav__link(href="about-us.html") О нас
+          li.nav__item
+            a.nav__link.nav__link_active(href="list-products.html") Товары
+          li.nav__item
+            a.nav__link(href="services.html") Услуги
+          li.nav__item
+            a.nav__link(href="contacts.html") Контакты
+      .header__search.search
+        a.search__open
+        form.search__form
+          input(type="text", placeholder="Что вы ищите?").search__input
+          a.search__close
+      .header__sep
+      .header__lang.lang
+        .lang__open
+          .lang__title RU
+          .lang__cunt
+        ul.lang__list
+          li.lang__item
+            a.lang__link(href="#") EN
+      .mobile-nav.mobile-nav_first
+        .mobile-nav__button.mobile-nav__button_search
+        form.mobile-nav__search
+          input.mobile-nav__input(type="text", placeholder="Что вы ищите?")
+      .mobile-nav
+        .mobile-nav__button.mobile-nav__button_menu
+        ul.mobile-nav__menu-list
+          li.mobile-nav__menu-item
+            a.mobile-nav__menu-link(href="home.html") Главная
+          li.mobile-nav__menu-item
+            a.mobile-nav__menu-link(href="about-us.html") О нас
+          li.mobile-nav__menu-item
+            a.mobile-nav__menu-link.mobile-nav__menu-link_active(href="list-products.html") Товары
+            ul.mobile-nav__submenu
+              li.mobile-nav__submenu-item
+                a.mobile-nav__submenu-link Сельхозтехника
+              li.mobile-nav__submenu-item
+                a.mobile-nav__submenu-link Спецтехника
+              li.mobile-nav__submenu-item
+                a.mobile-nav__submenu-link Грузовая техника
+              li.mobile-nav__submenu-item
+                a.mobile-nav__submenu-link Запчасти
+          li.mobile-nav__menu-item
+            a.mobile-nav__menu-link(href="services.html") Услуги
+          li.mobile-nav__menu-item
+            a.mobile-nav__menu-link(href="contacts.html") Контакты
+          li.mobile-nav__menu-item
+            a.mobile-nav__menu-link RU
+            ul.mobile-nav__submenu
+              li.mobile-nav__submenu-item
+                a.mobile-nav__submenu-link EN
+              li.mobile-nav__submenu-item
   section.page-head.page-head_products
   section.page.page__products.products
     section.controls
