@@ -92,6 +92,7 @@ $(function() {
     singleItem: true,
     navigation: false,
     pagination: true,
+    autoPlay: 5000,
     transitionStyle: "fade"
   });
 
@@ -134,5 +135,18 @@ $(function() {
     e.preventDefault();
     $(this).next().toggleClass('mobile-nav__submenu_open')
   })
+
+  $('.side-nav__link').on('click', function(e) {
+    e.preventDefault();
+    $nav = $('.side-nav');
+    $nav.find('.side-nav__link').removeClass('side-nav__link_active');
+    $(this).addClass('side-nav__link_active');
+
+    if($(this).hasClass('side-nav__link_1')) {
+      $('.products__filter').addClass('products__filter_active');
+    } else {
+      $('.products__filter').removeClass('products__filter_active');
+    }
+  });
 
 });

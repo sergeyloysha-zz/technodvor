@@ -192,16 +192,18 @@ strong
     height 4rem
 
     +mediaMin(size-sm)
-      width 24.4rem
+      width 23.1rem
       height 6rem
 
 
 .page-head
+  position relative
   width 100%
   padding-top 13%
   background #ececec
   background-position center
   background-size cover
+  z-index 2
 
   &_about-us
     background-image url('../images/pages/about_image.png')
@@ -583,8 +585,8 @@ strong
 
   &__icon
     display block
-    width 30px
-    height 30px
+    width 2.5rem
+    height 2.5rem
     background-position center
     background-repeat no-repeat
     opacity .7
@@ -597,25 +599,22 @@ strong
       float left
 
     &_phone
-      background-image url('../images/icons/icon-phone-w.png')
+      background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHZlcnNpb249IjEuMSIgaWQ9ItCh0LvQvtC5XzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMjIuNCAyNSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMjIuNCAyNTsiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+LnN0MHtmaWxsOiNGRkZGRkY7fTwvc3R5bGU+PHRpdGxlPnBob25lPC90aXRsZT48ZyBpZD0i0KHQu9C+0LlfMiI+PGcgaWQ9ItCh0LvQvtC5XzEtMiI+PHBhdGggY2xhc3M9InN0MCIgZD0iTTIyLDIzLjFsLTIsMS40Yy0xLjMsMC45LTcsMS45LTE0LjYtNy40Qy0yLDguMSwwLjEsMy4yLDEuMSwybDEuNy0xLjhjMC40LTAuMywxLTAuMywxLjMsMC4xbDQuNSw1LjNsMCwwYzAuMywwLjQsMC4zLDEtMC4xLDEuM2wwLDBsLTIsMS40Yy0wLjgsMC44LTAuMSwyLDAuNywzLjJsMy44LDQuNWMxLjgsMS43LDIuOCwyLjUsMy42LDJsMS43LTEuOWMwLjQtMC4zLDEtMC4zLDEuNCwwLjFsNC41LDUuM2wwLDBDMjIuNSwyMi4xLDIyLjQsMjIuNywyMiwyMy4xeiIvPjwvZz48L2c+PC9zdmc+');
       &-dark
-        background-image url('../images/icons/icon-phone-d.png')
+        background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+PHN2ZyB3aWR0aD0iMjNweCIgaGVpZ2h0PSIyNXB4IiB2aWV3Qm94PSIwIDAgMjMgMjUiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+ICAgICAgICA8dGl0bGU+aWNvbiBwaG9uZTwvdGl0bGU+ICAgIDxkZXNjPkNyZWF0ZWQgd2l0aCBTa2V0Y2guPC9kZXNjPiAgICA8ZGVmcz48L2RlZnM+ICAgIDxnIGlkPSJQYWdlLTEiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPiAgICAgICAgPGcgaWQ9Imljb24tcGhvbmUiIGZpbGw9IiMzQzRENUYiPiAgICAgICAgICAgIDxnIGlkPSLQodC70L7QuV8yIj4gICAgICAgICAgICAgICAgPGcgaWQ9ItCh0LvQvtC5XzEtMiI+ICAgICAgICAgICAgICAgICAgICA8cGF0aCBkPSJNMjIsMjMuMDcgTDIwLDI0LjQzIEMxOC42OCwyNS4zNCAxMywyNi4zNyA1LjM2LDE3LjA3IEMtMi4wNSw4LjEyIDAuMDcsMy4xNSAxLjA2LDIgTDIuNzcsMC4yMyBDMy4xODAxMDg4LC0wLjA5MDA2NDc5MzcgMy43NjcxMTU1OSwtMC4wNDIyMzQ2MTA2IDQuMTIsMC4zNCBMOC42MSw1LjY2IEw4LjYxLDUuNjYgQzguOTIzODgyNTksNi4wNjgzNDUzNCA4Ljg3NjI3MzYxLDYuNjQ4MzA5MjcgOC41LDcgTDguNSw3IEw2LjUsOC40NCBDNS43MSw5LjIyIDYuNCwxMC40NCA3LjIsMTEuNjQgTDExLDE2LjE4IEMxMi43OCwxNy45IDEzLjc2LDE4LjY5IDE0LjYxLDE4LjEzIEwxNi4yNywxNi4yOCBDMTYuNjgxODI4NiwxNS45NTM2Njc1IDE3LjI3NTk3MDcsMTYuMDAxNzIzMSAxNy42MywxNi4zOSBMMjIuMTIsMjEuNyBMMjIuMTIsMjEuNyBDMjIuNDUwMTk3NCwyMi4xMTYwNjI0IDIyLjM5NzUwMTIsMjIuNzE3Njc3NiAyMiwyMy4wNyBMMjIsMjMuMDcgWiIgaWQ9IlNoYXBlIj48L3BhdGg+ICAgICAgICAgICAgICAgIDwvZz4gICAgICAgICAgICA8L2c+ICAgICAgICA8L2c+ICAgIDwvZz48L3N2Zz4=');
     &_address
-      background-image url('../images/icons/icon-address-w.png')
+      background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHZlcnNpb249IjEuMSIgaWQ9ItCh0LvQvtC5XzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMTggMjciIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDE4IDI3OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHN0eWxlIHR5cGU9InRleHQvY3NzIj4uc3Qwe2ZpbGw6I0ZGRkZGRjt9PC9zdHlsZT48dGl0bGU+aWNvbiBhZGRyZXNzPC90aXRsZT48ZyBpZD0i0KHQu9C+0LlfMiI+PGcgaWQ9ItCh0LvQvtC5XzEtMiI+PHBhdGggY2xhc3M9InN0MCIgZD0iTTksMS4yQzQsMS4yLDAsNSwwLDkuOFM5LDI3LDksMjdzOS0xMi40LDktMTcuMlMxNCwxLjIsOSwxLjJ6IE05LDEzLjhjLTIuNiwwLTQuNy0yLTQuNy00LjVTNi40LDQuOCw5LDQuOHM0LjcsMiw0LjcsNC41bDAsMEMxMy43LDExLjgsMTEuNiwxMy44LDksMTMuOHoiLz48L2c+PC9nPjwvc3ZnPg==');
       &-dark
-        background-image url('../images/icons/icon-address-d.png')
+        background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHZlcnNpb249IjEuMSIgaWQ9ItCh0LvQvtC5XzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMTggMjciIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDE4IDI3OyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHN0eWxlIHR5cGU9InRleHQvY3NzIj4uc3Qwe2ZpbGw6IzNDNEQ1Rjt9PC9zdHlsZT48dGl0bGU+aWNvbiBhZGRyZXNzPC90aXRsZT48ZyBpZD0i0KHQu9C+0LlfMiI+PGcgaWQ9ItCh0LvQvtC5XzEtMiI+PHBhdGggY2xhc3M9InN0MCIgZD0iTTksMS4yQzQsMS4yLDAsNSwwLDkuOEMwLDE0LjYsOSwyNyw5LDI3czktMTIuNCw5LTE3LjJDMTgsNSwxNCwxLjIsOSwxLjJ6IE05LDEzLjhjLTIuNiwwLTQuNy0yLTQuNy00LjVjMC0yLjUsMi4xLTQuNSw0LjctNC41czQuNywyLDQuNyw0LjVjMCwwLDAsMCwwLDBDMTMuNywxMS44LDExLjYsMTMuOCw5LDEzLjh6Ii8+PC9nPjwvZz48L3N2Zz4=');
     &_time
-      background-image url('../images/icons/icon-time-w.png')
+      background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHZlcnNpb249IjEuMSIgaWQ9ItCh0LvQvtC5XzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMjYuOCAyNi44IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAyNi44IDI2Ljg7IiB4bWw6c3BhY2U9InByZXNlcnZlIj48c3R5bGUgdHlwZT0idGV4dC9jc3MiPi5zdDB7ZmlsbDojRkZGRkZGO308L3N0eWxlPjx0aXRsZT7QoNC10YHRg9GA0YEgMTwvdGl0bGU+PGcgaWQ9ItCh0LvQvtC5XzIiPjxnIGlkPSLQodC70L7QuV8xLTIiPjxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik0xMy40LDI2LjhjNy40LDAsMTMuNC02LDEzLjQtMTMuNFMyMC44LDAsMTMuNCwwQzYsMCwwLDYsMCwxMy40QzAsMjAuOCw2LDI2LjgsMTMuNCwyNi44QzEzLjQsMjYuOCwxMy40LDI2LjgsMTMuNCwyNi44eiBNMTMuNCwyLjJjNi4yLDAsMTEuMiw1LDExLjIsMTEuMnMtNSwxMS4yLTExLjIsMTEuMnMtMTEuMi01LTExLjItMTEuMmMwLDAsMCwwLDAsMEMyLjIsNy4yLDcuMiwyLjIsMTMuNCwyLjJ6Ii8+PHBvbHlnb24gY2xhc3M9InN0MCIgcG9pbnRzPSIxOC45LDE1LjcgMTQuMSwxMyAxNC4xLDQuNSAxMi42LDQuNSAxMi42LDEzLjggMTguMiwxNyAiLz48L2c+PC9nPjwvc3ZnPg==');
       &-dark
-        background-image url('../images/icons/icon-time-d.png')
-
+        background-size 100%
+        background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+PHN2ZyB3aWR0aD0iMjdweCIgaGVpZ2h0PSIyN3B4IiB2aWV3Qm94PSIwIDAgMjcgMjciIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+ICAgICAgICA8dGl0bGU+aWNvbiB3b3JraW5nIGhvdXJzPC90aXRsZT4gICAgPGRlc2M+Q3JlYXRlZCB3aXRoIFNrZXRjaC48L2Rlc2M+ICAgIDxkZWZzPjwvZGVmcz4gICAgPGcgaWQ9IlBhZ2UtMSIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+ICAgICAgICA8ZyBpZD0iaWNvbi13b3JraW5nLWhvdXJzIiBmaWxsPSIjM0M0RDVGIj4gICAgICAgICAgICA8ZyBpZD0i0KHQu9C+0LlfMiI+ICAgICAgICAgICAgICAgIDxnIGlkPSLQodC70L7QuV8xLTIiPiAgICAgICAgICAgICAgICAgICAgPHBhdGggZD0iTTEzLjM5LDI2Ljc5IEMyMC43ODM3OTA2LDI2Ljc4OTk5NzkgMjYuNzc4MTU2NiwyMC43OTcxMjEyIDI2Ljc3OTk5NTksMTMuNDAzMzMwOCBDMjYuNzgxODM1MSw2LjAwOTU0MDQ3IDIwLjc5MDQ1MTQsMC4wMTM2ODIyMjE5IDEzLjM5NjY2MTcsMC4wMTAwMDE2NTkgQzYuMDAyODcyLDAuMDA2MzIxMDk2MTMgMC4wMDU1MjE4NzQ5OCw1Ljk5NjIxMTQ2IDEuNDg2NTg4NTZlLTE1LDEzLjM5IEMtMC4wMDUzMTMxMDAxNSwxNi45NDM3OTQgMS40MDMzODg5MiwyMC4zNTM3MDc4IDMuOTE1MzY1NCwyMi44Njc1NjAyIEM2LjQyNzM0MTg4LDI1LjM4MTQxMjcgOS44MzYyMDMsMjYuNzkyNjYgMTMuMzksMjYuNzkgTDEzLjM5LDI2Ljc5IFogTTEzLjM5LDIuMjMgQzE5LjU1MzQ5NzgsMi4yMyAyNC41NSw3LjIyNjUwMjE5IDI0LjU1LDEzLjM5IEMyNC41NSwxOS41NTM0OTc4IDE5LjU1MzQ5NzgsMjQuNTUgMTMuMzksMjQuNTUgQzcuMjI2NTAyMTksMjQuNTUgMi4yMywxOS41NTM0OTc4IDIuMjMsMTMuMzkgQzIuMjM1NTEzMzksNy4yMjg3ODczNiA3LjIyODc4NzM2LDIuMjM1NTEzMzkgMTMuMzksMi4yMyBMMTMuMzksMi4yMyBaIiBpZD0iU2hhcGUiPjwvcGF0aD4gICAgICAgICAgICAgICAgICAgIDxwb2x5Z29uIGlkPSJTaGFwZSIgcG9pbnRzPSIxOC45MyAxNS43MiAxNC4xNCAxMi45OCAxNC4xNCA0LjQ2IDEyLjY1IDQuNDYgMTIuNjUgMTMuODEgMTguMTkgMTcuMDIiPjwvcG9seWdvbj4gICAgICAgICAgICAgICAgPC9nPiAgICAgICAgICAgIDwvZz4gICAgICAgIDwvZz4gICAgPC9nPjwvc3ZnPg==');
   &__map
     display block
     width 100%
-    height 22rem
-
-    +mediaMin(size-sm)
-      height auto
+    height 30rem
 
   &__copy
     font-size 1.2rem
@@ -654,10 +653,43 @@ strong
 
 
 .contacts-form
+
+  &__error
+    position relative
+    display block
+    color #fff
+    font-size 1.2rem
+    border 1px solid red
+    padding 1rem 1rem 1rem 4rem
+    margin-bottom 1rem
+
+    &:before
+      content: '!'
+      position absolute
+      display flex
+      align-items center
+      justify-content center
+      width 2rem
+      height 2rem
+      top 0.8rem
+      left 1rem
+      color #fff
+      background red
+      border-radius 50%
+      font-weight 700
+
+
   &__fieldset
     margin 0 0 1rem 0
     padding 0
     border 0
+
+    &_error
+      position relative
+
+      & input
+      & textarea
+        border-color red !important
 
     .btn
       width 100%
@@ -902,14 +934,14 @@ strong
     left 0
 
     +mediaMin(size-sm)
-      top 15%
+      top 10%
       right 0
 
     +mediaMin(size-md)
-      left 10%
+      left 5%
 
     +mediaMin(size-lg)
-      left 15%
+      left 10%
 
   &__text
     display none
@@ -944,6 +976,9 @@ strong
 
   &__info
     margin-bottom 4rem
+
+    &-img
+      max-width 100%
 
     &-content
       display flex
@@ -982,26 +1017,35 @@ strong
       height auto
 
     &:nth-child(1)
+      height 18rem
       order 1
       width 100%
-      +mediaMin(size-md)
+      +mediaMin(size-sm)
         width initial
     &:nth-child(2)
       order 4
-      +mediaMin(size-md)
+      width 50%
+      +mediaMin(size-sm)
         order 2
+        width initial
     &:nth-child(3)
       order 2
-      +mediaMin(size-md)
+      width 50%
+      +mediaMin(size-sm)
+        width initial
         order 3
     &:nth-child(4)
       order 5
-      +mediaMin(size-md)
+      width 50%
+      +mediaMin(size-sm)
+        width initial
         order 4
     &:nth-child(5)
       order 3
-      +mediaMin(size-md)
+      width 50%
+      +mediaMin(size-sm)
         order 5
+        width initial
   .btn
     width 100%
 
@@ -1105,11 +1149,11 @@ strong
 
   &__icon
     display inline-block
-    max-width 50%
+    max-width 7rem
     margin-bottom 1rem
 
     +mediaMin(size-sm)
-      max-width 100%
+      max-width 12.5rem
 
   &__description
     border-top 1px solid alpha(color-green, 0.3)
@@ -1317,13 +1361,24 @@ strong
     flex 1
 
   &__filter
+    display relative
     display flex
     align-items flex-end
     border-bottom 1px solid #eee
     margin-top 1rem
+    height 0px
+    opacity 0
+    visibility hidden
+    transition height .25s ease-out, opacity .15s ease-out
+    z-index 1
 
     +mediaMin(size-sm)
       padding-left 4rem
+
+    &_active
+      height 10rem
+      visibility visible
+      opacity 1
 
 
     &-title
@@ -1554,6 +1609,9 @@ strong
       background #3c4d5f
       color color-white
 
+    &_active + .side-subnav
+      display block
+
     &:before
       content ' '
       position absolute
@@ -1576,6 +1634,7 @@ strong
 
 
 .side-subnav
+  display none
   margin 1rem 0 1rem 3rem
   padding 0
   list-style none

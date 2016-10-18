@@ -268,11 +268,11 @@
     <footer class="footer">
       <div class="footer__form">
         <h4 class="footer__form-title">Контактная форма</h4>
-        <form class="contacts-form">
+        <form class="contacts-form"><span class="contacts-form__error">Обязательные поля содержат ошибку. Проверьте и попробуйте снова.</span>
           <fieldset class="contacts-form__fieldset">
             <input type="text" placeholder="Имя*" class="contacts-form__input contacts-form__input-name">
           </fieldset>
-          <fieldset class="contacts-form__fieldset">
+          <fieldset class="contacts-form__fieldset contacts-form__fieldset_error">
             <input type="text" placeholder="Email*" class="contacts-form__input contacts-form__input-email">
           </fieldset>
           <fieldset class="contacts-form__fieldset">
@@ -335,7 +335,8 @@
             </div>
           </div>
         </div>
-      </div><img src="images/map.jpg" class="footer__map">
+      </div>
+      <div id="map" class="footer__map"></div>
       <div class="footer__copy">
         <div class="container">
           <div class="row">
@@ -345,6 +346,22 @@
           </div>
         </div>
       </div>
+      <script>
+        function initMap() {
+        var coord = {lat: 53.894957, lng: 27.555690};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 17,
+          center: coord,
+          disableDefaultUI: true,
+          scrollwheel: false
+        });
+        var marker = new google.maps.Marker({
+          position: coord,
+          map: map
+        });
+        }
+      </script>
+      <script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDwRKu_oltUWihq2__6nY4eKTqNpi_Tk4Q&amp;callback=initMap"></script>
     </footer>
     <script src="js/app.js"></script>
   </body>

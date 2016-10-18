@@ -2,9 +2,10 @@ footer.footer
   .footer__form
     h4.footer__form-title Контактная форма
     form.contacts-form
+      span.contacts-form__error Обязательные поля содержат ошибку. Проверьте и попробуйте снова.
       fieldset.contacts-form__fieldset
         input(type="text", placeholder="Имя*").contacts-form__input.contacts-form__input-name
-      fieldset.contacts-form__fieldset
+      fieldset.contacts-form__fieldset.contacts-form__fieldset_error
         input(type="text", placeholder="Email*").contacts-form__input.contacts-form__input-email
       fieldset.contacts-form__fieldset
         input(type="text", placeholder="Телефон").contacts-form__input.contacts-form__input-phone
@@ -46,7 +47,7 @@ footer.footer
             tr
               td Суб - Вс:
               td 8.00 - 22.00
-  img(src="images/map.jpg").footer__map
+  #map.footer__map
   .footer__copy
     .container
       .row
@@ -56,4 +57,20 @@ footer.footer
             span
               | Разработка сайта - 
               a(href="#") Meldgraphics
+  script.
+    function initMap() {
+    var coord = {lat: 53.894957, lng: 27.555690};
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 17,
+      center: coord,
+      disableDefaultUI: true,
+      scrollwheel: false
+    });
+    var marker = new google.maps.Marker({
+      position: coord,
+      map: map
+    });
+    }
+  script(async='', defer='', src='https://maps.googleapis.com/maps/api/js?key=AIzaSyDwRKu_oltUWihq2__6nY4eKTqNpi_Tk4Q&callback=initMap')
+
             
