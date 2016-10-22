@@ -4254,3 +4254,63 @@ strong {
   color: #354454;
   border-bottom: 1px solid rgba(60,77,95,0.3);
 }
+.b-options {
+  max-width: 80rem;
+}
+.b-options__item {
+  margin-bottom: 1rem;
+}
+.b-option__title {
+  position: relative;
+  background: #f5f6f7;
+  padding: 1rem 2rem 1rem 3rem;
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.b-option__title::before {
+  position: absolute;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 2rem;
+  height: 2rem;
+  content: '+';
+  font-size: 2rem;
+  line-height: 2rem;
+  left: 1rem;
+  top: 50%;
+  margin-top: -1rem;
+}
+.b-option__title:hover {
+  color: #498f43;
+}
+.b-option__title:active,
+.b-option__title_active {
+  background: #3d4f61;
+  color: #fff;
+}
+.b-option__title_active:hover {
+  color: #fff;
+}
+.b-option__list {
+  display: none;
+  margin-top: 2rem;
+}
+.b-option__item {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0.5rem 0;
+  margin: 0 0 0.5rem 0;
+  border-bottom: 1px solid #c4c9cf;
+  font-size: 1.4rem;
+}
+.b-option__item-name {
+  width: 70%;
+}
+.b-option__item-value {
+  width: 30%;
+}

@@ -1942,3 +1942,61 @@ strong
     &:hover
       color color-main
       border-bottom 1px solid alpha(#3c4d5f, .3)
+
+.b-options
+  max-width: 80rem
+
+  &__item
+    margin-bottom: 1rem
+
+.b-option
+
+  &__title
+    position: relative;
+    background: #f5f6f7
+    padding: 1rem 2rem 1rem 3rem
+    font-weight: 600
+    font-size: 1.5rem
+    line-height: 2rem
+    cursor: pointer
+    transition all .15s
+
+    &::before
+      position: absolute;
+      display: flex;
+      width: 2rem
+      height: 2rem
+      content: '+'
+      font-size: 2rem
+      line-height: 2rem
+      left: 1rem
+      top: 50%
+      margin-top: -1rem
+
+    &:hover
+      color: color-green
+
+    &:active
+    &_active
+      background: #3d4f61
+      color: #fff
+
+    &_active
+
+      &:hover
+        color: #fff
+  &__list
+    display: none
+    margin-top: 2rem
+
+  &__item
+    display: flex
+    padding: 0.5rem 0
+    margin: 0 0 0.5rem 0
+    border-bottom: 1px solid #c4c9cf
+    font-size: 1.4rem
+
+    &-name
+      width: 70%
+    &-value
+      width: 30%
