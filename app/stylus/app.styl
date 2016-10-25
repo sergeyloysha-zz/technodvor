@@ -1000,12 +1000,15 @@ strong
   padding 4rem 0
 
   &__list
+    display none
     padding 0
     list-style none
-    display flex
-    justify-content center
-    align-items center
-    flex-wrap wrap
+
+    +mediaMin(size-sm)
+      display flex
+      justify-content center
+      align-items center
+      flex-wrap wrap
 
     +mediaMin(size-md)
       margin 5rem 0 10rem 0
@@ -1046,6 +1049,25 @@ strong
       +mediaMin(size-sm)
         order 5
         width initial
+
+  &-m
+    &__list
+      display flex
+      justify-content center
+      align-items center
+      flex-wrap wrap
+      margin 0
+      padding 0
+      list-style none
+      flex-direction: column
+
+      +mediaMin(size-sm)
+        display: none
+
+    &__item
+      display: block;
+      padding: 2rem 0
+
   .btn
     width 100%
 
