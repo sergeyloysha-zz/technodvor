@@ -149,4 +149,13 @@ $(function() {
     }
   });
 
+  $('.b-option__title').on('click', function(e) {
+    $(this).toggleClass('b-option__title_active');
+    if($(this).hasClass('b-option__title_active')) {
+      $(this).next().slideDown('slow');
+    } else {
+      $(this).next().slideUp('slow');
+    }
+  });
+
 });
