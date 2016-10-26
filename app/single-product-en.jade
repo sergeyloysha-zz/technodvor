@@ -4,19 +4,19 @@ block content
   header.header
     .header__inner
       a.header__logo.logo(href='home.html')
-        img(src="images/logo.svg").logo__src
+        img(src="images/logo-en.svg").logo__src
       nav.header__nav.nav
         ul.nav__list
           li.nav__item
-            a.nav__link(href="home.html") Главная
+            a.nav__link(href="home.html") Home
           li.nav__item
-            a.nav__link(href="about-us.html") О нас
+            a.nav__link(href="about-us.html") About us
           li.nav__item
-            a.nav__link.nav__link_active(href="list-products.html") Товары
+            a.nav__link.nav__link_active(href="list-products.html") Products
           li.nav__item
-            a.nav__link(href="services.html") Услуги
+            a.nav__link(href="services.html") Services
           li.nav__item
-            a.nav__link(href="contacts.html") Контакты
+            a.nav__link(href="contacts.html") Contacts
       .header__search.search
         a.search__open
         form.search__form
@@ -25,11 +25,11 @@ block content
       .header__sep
       .header__lang.lang
         .lang__open
-          .lang__title RU
+          .lang__title EN
           .lang__cunt
         ul.lang__list
           li.lang__item
-            a.lang__link(href="#") EN
+            a.lang__link(href="#") RU
       .mobile-nav.mobile-nav_first
         .mobile-nav__button.mobile-nav__button_search
         form.mobile-nav__search
@@ -67,7 +67,7 @@ block content
     section.controls
       .container
         .controls__inner
-          a.control-back.btn.btn_gt(href="#") Вернуться к категориям
+          a.control-back.btn.btn_gt(href="#") Back to categories
           .control-page
             a.control-page__item.control-page__item_prev(href="#")
             a.control-page__item.control-page__item_next(href="#")
@@ -76,7 +76,7 @@ block content
         .row
           .col-md-6
             .product__slider
-              .product__slider-sale Акция
+              .product__slider-sale Special offer
               .fotorama(data-nav="thumbs", data-allowfullscreen="true")
                 a.product__slider-slide(href="//placehold.it/800x600")
                   span asd
@@ -88,35 +88,35 @@ block content
               h2.product__name Belarus 1220.6
               .product__details
                 .product__detail
-                  span.product__detail-item Бренд:
+                  span.product__detail-item Brand:
                   span.product__detail-value Minsk Tractor Works
                 .product__detail
-                  span.product__detail-item Номер продукта:
+                  span.product__detail-item Product code:
                   span.product__detail-value 02551059845
                 .product__detail
-                  span.product__detail-item Наличие:
-                  span.product__detail-value.product__detail-value_green В наличии
+                  span.product__detail-item Availability:
+                  span.product__detail-value.product__detail-value_green In stock
                 .product__detail
-                  span.product__detail-item Наличие:
-                  span.product__detail-value.product__detail-value_red Нет в наличии
+                  span.product__detail-item Availability:
+                  span.product__detail-value.product__detail-value_red Out of stock
               .product__sale
-                span.product__sale-title Акция:
-                p.product__sale-description Предназначен для выполнения различных сельскохозяйственных работ с навесными, полунавесными и прицепными машинами, на транспорте, с погрузочно-разгрузочными средствами, уборочными комплексами и для привода стационарных сельскохозяйственных машин. Предназначен для выполнения различных сельскохозяйственных работ.
-              p.product__description Трактор БЕЛАРУС-1221.2 (4×4) относится к тяговому классу 2,0 с двигателем мощностью 130 л.с. Предназначен для выполнения различных сельскохозяйственных работ с навесными, полунавесными и прицепными машинами, на транспорте, с погрузочно-разгрузочными средствами, уборочными комплексами и для привода стационарных сельскохозяйственных машин. 
+                span.product__sale-title Special offer:
+                p.product__sale-description Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+              p.product__description Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
               .product__control
-                a.btn.btn_red.btn_large(href="#order") Заказать
+                a.btn.btn_red.btn_large(href="#order") Order
         .row
           .col-md-12
             .tabs
               input#tab1(type='radio', name='tabs', checked='')
-              label(for='tab1') Описание
+              label(for='tab1') Description
               input#tab2(type='radio', name='tabs')
-              label(for='tab2') Характеристики
+              label(for='tab2') Characteristics
               input#tab3(type='radio', name='tabs')
-              label(for='tab3') Преимущества
+              label(for='tab3') Advantages
               section#content-tab1
-                p Трактор БЕЛАРУС-1221.2 (4×4) относится к тяговому классу 2,0 с двигателем мощностью 130 л.с. Предназначен для выполнения различных сельскохозяй ственных работ с навесными, полунавесными и прицепными машинами, на транспорте, с погрузочно-разгрузочными средствами, уборочными комплексами и для привода стационарных сельскохозяйственных машин. Трактор БЕЛАРУС-1221.2 (4×4) относится к тяговому классу 2,0 с двигателем мощностью 130 л.с. Предназначен для выполнения различных сельскохозяй ственных работ с навесными, полунавесными и прицепными машинами, на транспорте, с погрузочно-разгрузочными средствами, уборочными комплексами и для привода стационарных сельскохозяйственных машин. 
-                p Трактор БЕЛАРУС-1221.2 (4×4) относится к тяговому классу 2,0 с двигателем мощностью 130 л.с. Предназначен для выполнения различных сельскохозяй ственных работ с навесными, полунавесными и прицепными машинами, на транспорте, с погрузочно-разгрузочными средствами, уборочными комплексами и для привода стационарных сельскохозяйственных машин. 
+                p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat in dolorem nam! Amet repellat modi, tenetur in quos quo nisi fugit tempore vel soluta officiis iure distinctio ipsam illo, rem.
+                p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, tempore porro repellat ipsam veniam aliquid libero quod doloremque sapiente tenetur nisi dolorem dicta animi optio dolores alias ad ex reiciendis?
               section#content-tab2
                 .b-options
                   .b-option.b-options__item
@@ -216,7 +216,7 @@ block content
                 p
                   | Во всемирной паутине долгое время использовались стандарты HTML 4.01 и XHTML 1.1, и веб-страницы на практике оказывались свёрстаны с использованием смеси особенностей, представленных различными спецификациями, включая спецификации программных продуктов, например веб-браузеров, а также сложившихся общеупотребительных приёмов. HTML5 был создан, как единый язык разметки, который мог бы сочетать синтаксические нормы HTML и XHTML. Он расширяет, улучшает и рационализирует разметку документов, а также добавляет единое API для сложных веб-приложений.
 
-  include templates/offers
+  include templates/offers-en
   include templates/partners
   .remodal(data-remodal-id='order')
     button.remodal-close(data-remodal-action='close')
@@ -235,4 +235,4 @@ block content
           textarea(placeholder="Ваше сообщение")
         fieldset.contacts-form__fieldset
           input(type="submit", value="Отправить").btn.btn_green.btn_full
-  include templates/footer
+  include templates/footer-en

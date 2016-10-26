@@ -103,8 +103,8 @@
           <div class="row intro__info-content">
             <div class="col-md-4 intro__info-left"><img src="images/intro_image.gif" class="intro__info-img"></div>
             <div class="col-md-8 col-xs-12 intro__info-right">
-              <h3>Добро пожаловать на страницу ООО «Технодвор»! </h3>
-              <p>Мы с уважением относимся к Вашим потребностям и стараемся оптимизировать Ваши технологические процессы с помощью наших продукции и услуг.<br/>Компания «Технодвор» является поставщиком качественных решений для бизнеса в области сельскохозяйственной, автомобильной и специальной техники в сфере тяжелой и легкой промышленности. Наравне с продажей техники и оборудования мы оказываем консультационные и посреднические услуги. Опыт наших сотрудников в профессиональной области составляет больше 15 лет.</p>
+              <h3>Welcome to the web-page of «Technodvor» LLC! </h3>
+              <p>We highly respect your needs and do our best to optimize your technological processes with the help of our goods and services.<br/>“Technodvor” company is the provider of high-quality solutions for businesses with the focus on agricultural, automotive and specialty machinery for both heavy and light industries. Apart from machinery distribution, we also provide advisory and intermediary services. Our employees have been working in the field for more than 15 years. </p>
               <div class="align-right"><a href="#" class="btn btn_gt">Read more</a></div>
             </div>
           </div>
@@ -383,7 +383,16 @@
           zoom: 17,
           center: coord,
           disableDefaultUI: true,
-          scrollwheel: false
+          scrollwheel: false,
+          styles: [{
+            stylers: [{
+              saturation: -100
+            }]
+          }],
+          zoomControl: true,
+          zoomControlOptions: {
+              position: google.maps.ControlPosition.RIGHT_CENTER
+          }
         });
         var marker = new google.maps.Marker({
           position: coord,

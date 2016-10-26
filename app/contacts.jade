@@ -247,7 +247,7 @@ block content
                   p E-mail:
                     span igor@technodvor.com
   footer.footer
-    img(src="images/map.jpg").footer__map
+    #map.footer__map
     .footer__copy
       .container
         .row
@@ -257,4 +257,28 @@ block content
               span
                 | Разработка сайта - 
                 a(href="#") Meldgraphics
+  script.
+    function initMap() {
+    var coord = {lat: 53.894957, lng: 27.555690};
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 17,
+      center: coord,
+      disableDefaultUI: true,
+      scrollwheel: false,
+      styles: [{
+        stylers: [{
+          saturation: -100
+        }]
+      }],
+      zoomControl: true,
+      zoomControlOptions: {
+          position: google.maps.ControlPosition.RIGHT_CENTER
+      }
+    });
+    var marker = new google.maps.Marker({
+      position: coord,
+      map: map
+    });
+    }
+  script(async='', defer='', src='https://maps.googleapis.com/maps/api/js?key=AIzaSyBowPUp3JBYhntZ3j5wDx8IkeO_trXMzZA&callback=initMap')
               

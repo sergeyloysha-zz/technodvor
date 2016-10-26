@@ -383,7 +383,16 @@
           zoom: 17,
           center: coord,
           disableDefaultUI: true,
-          scrollwheel: false
+          scrollwheel: false,
+          styles: [{
+            stylers: [{
+              saturation: -100
+            }]
+          }],
+          zoomControl: true,
+          zoomControlOptions: {
+              position: google.maps.ControlPosition.RIGHT_CENTER
+          }
         });
         var marker = new google.maps.Marker({
           position: coord,
