@@ -1,0 +1,134 @@
+extends templates/base
+
+block content
+  header.header
+    .header__inner
+      a.header__logo.logo(href='home.html')
+        img(src="images/logo-en.svg").logo__src
+      nav.header__nav.nav
+        ul.nav__list
+          li.nav__item
+            a.nav__link(href="home.html").nav__link_active Home
+          li.nav__item
+            a.nav__link(href="about-us.html") About us
+          li.nav__item
+            a.nav__link(href="list-products.html") Products
+          li.nav__item
+            a.nav__link(href="services.html") Services
+          li.nav__item
+            a.nav__link(href="contacts.html") Contacts
+      .header__search.search
+        a.search__open
+        form.search__form
+          input(type="text", placeholder="Что вы ищите?").search__input
+          a.search__close
+      .header__sep
+      .header__lang.lang
+        .lang__open
+          .lang__title EN
+          .lang__cunt
+        ul.lang__list
+          li.lang__item
+            a.lang__link(href="#") RU
+      .mobile-nav.mobile-nav_first
+        .mobile-nav__button.mobile-nav__button_search
+        form.mobile-nav__search
+          input.mobile-nav__input(type="text", placeholder="Что вы ищите?")
+      .mobile-nav
+        .mobile-nav__button.mobile-nav__button_menu
+        ul.mobile-nav__menu-list
+          li.mobile-nav__menu-item
+            a.mobile-nav__menu-link.mobile-nav__menu-link_active(href="home.html") Home
+          li.mobile-nav__menu-item
+            a.mobile-nav__menu-link(href="about-us.html") About us
+          li.mobile-nav__menu-item
+            a.mobile-nav__menu-link(href="list-products.html") Products
+            ul.mobile-nav__submenu
+              li.mobile-nav__submenu-item
+                a.mobile-nav__submenu-link Сельхозтехника
+              li.mobile-nav__submenu-item
+                a.mobile-nav__submenu-link Спецтехника
+              li.mobile-nav__submenu-item
+                a.mobile-nav__submenu-link Грузовая техника
+              li.mobile-nav__submenu-item
+                a.mobile-nav__submenu-link Запчасти
+          li.mobile-nav__menu-item
+            a.mobile-nav__menu-link(href="services.html") Services
+          li.mobile-nav__menu-item
+            a.mobile-nav__menu-link(href="contacts.html") Contacts
+          li.mobile-nav__menu-item
+            a.mobile-nav__menu-link EN
+            ul.mobile-nav__submenu
+              li.mobile-nav__submenu-item
+                a.mobile-nav__submenu-link RU
+              li.mobile-nav__submenu-item
+  section.intro
+    ul.intro__list
+      li.intro__item
+        .intro__slide
+          img.intro__image(src='images/intro_1.png')
+          .intro__content
+            .intro__text Lorem ipsum dolor<br/> sit amet, consectetur<br/>adipisicing elit, sed
+      li.intro__item
+        .intro__slide
+          img.intro__image(src='images/intro_2.png')
+          .intro__content
+            .intro__text Lorem ipsum dolor<br/> sit amet, consectetur<br/>adipisicing elit, sed
+      li.intro__item
+        .intro__slide
+          img.intro__image(src='images/intro_3.png')
+          .intro__content
+            .intro__text Lorem ipsum dolor<br/> sit amet, consectetur<br/>adipisicing elit, sed
+      li.intro__item
+        .intro__slide
+          img.intro__image(src='images/intro_4.png')
+          .intro__content
+            .intro__text Lorem ipsum dolor<br/> sit amet, consectetur<br/>adipisicing elit, sed
+    .intro__info
+      .container
+        .row.intro__info-content
+          .col-md-4.intro__info-left
+            img(src="images/intro_image.gif").intro__info-img
+          .col-md-8.col-xs-12.intro__info-right
+            h3 Добро пожаловать на страницу ООО «Технодвор»! 
+            p Мы с уважением относимся к Вашим потребностям и стараемся оптимизировать Ваши технологические процессы с помощью наших продукции и услуг.<br/>Компания «Технодвор» является поставщиком качественных решений для бизнеса в области сельскохозяйственной, автомобильной и специальной техники в сфере тяжелой и легкой промышленности. Наравне с продажей техники и оборудования мы оказываем консультационные и посреднические услуги. Опыт наших сотрудников в профессиональной области составляет больше 15 лет.
+            .align-right
+              a.btn.btn_gt(href="#") Read more
+  section.products-home
+    .container
+      .row
+        .col-md-12
+          a(href="#")
+            h3.bordered.link Products
+          ul.products-home__list
+            li.products-home__item
+              a.product-home.product-home_0
+            li.products-home__item
+              a.product-home.product-home_1
+            li.products-home__item
+              a.product-home.product-home_2
+            li.products-home__item
+              a.product-home.product-home_3
+            li.products-home__item
+              a.product-home.product-home_4
+          ul.products-home-m__list
+            li.products-home-m__item
+              a.product-home-m(href="#")
+                img(src="images/p_1.png")
+            li.products-home-m__item
+              a.product-home-m(href="#")
+                img(src="images/p_2.png")
+            li.products-home-m__item
+              a.product-home-m(href="#")
+                img(src="images/p_3.png")
+            li.products-home-m__item
+              a.product-home-m(href="#")
+                img(src="images/p_4.png")
+            li.products-home-m__item
+              a.product-home-m(href="#")
+                img(src="images/p_5.png")
+          .align-right
+            a.btn.btn_gt(href="#") See all products
+  include templates/offers-en
+  include templates/partners
+  include templates/footer-en

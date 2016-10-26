@@ -1,0 +1,75 @@
+footer.footer
+  .footer__form
+    h4.footer__form-title Contact form
+    form.contacts-form
+      fieldset.contacts-form__fieldset
+        input(type="text", placeholder="Name*").contacts-form__input.contacts-form__input-name
+      fieldset.contacts-form__fieldset
+        input(type="text", placeholder="Email*").contacts-form__input.contacts-form__input-email
+      fieldset.contacts-form__fieldset
+        input(type="text", placeholder="Phone").contacts-form__input.contacts-form__input-phone
+      fieldset.contacts-form__fieldset
+        input(type="text", placeholder="Subject").contacts-form__input.contacts-form__input-subject
+      fieldset.contacts-form__fieldset
+        textarea(placeholder="Your message")
+      fieldset.contacts-form__fieldset.align-right
+        input(type="submit", value="Send").btn.btn_transparent
+              
+  .footer__contacts
+    .container
+      .row
+        .col-md-4.footer__contacts-item
+          .footer__icon.footer__icon_phone
+          table
+            tr
+              td Phone:
+              td +375 17 231 56 56
+            tr
+              td
+              td +375 17 231 57 57
+            tr
+              td Fax:
+              td +375 17 231 31 25
+        .col-md-4.footer__contacts-item
+          .footer__icon.footer__icon_address
+          table
+            tr
+              td 220040, Minsk
+            tr
+              td Kirova str., 8-4, office 45
+        .col-md-4.footer__contacts-item
+          .footer__icon.footer__icon_time
+          table
+            tr
+              td Mon - Fri:
+              td 8.00 - 22.00
+            tr
+              td Sat - Sun:
+              td 8.00 - 22.00
+  #map.footer__map
+  .footer__copy
+    .container
+      .row
+        .col-md-12
+          .footer__copy-inner
+            span © 2016 "Technodvor" LLC
+            span
+              | Site by - 
+              a(href="#") Meldgraphics
+  script.
+    function initMap() {
+    var coord = {lat: 53.894957, lng: 27.555690};
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 17,
+      center: coord,
+      disableDefaultUI: true,
+      scrollwheel: false
+    });
+    var marker = new google.maps.Marker({
+      position: coord,
+      map: map
+    });
+    }
+  script(async='', defer='', src='https://maps.googleapis.com/maps/api/js?key=AIzaSyBowPUp3JBYhntZ3j5wDx8IkeO_trXMzZA&callback=initMap')
+
+            

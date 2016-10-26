@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="@sergeyloyshaß">
+    <meta name="author" content="Sergey Loysha">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:500,600,400,300,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/app.css">
+    <title>Технодвор</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__inner"><a href="home.html" class="header__logo logo"><img src="images/logo.svg" class="logo__src"></a>
+        <nav class="header__nav nav">
+          <ul class="nav__list">
+            <li class="nav__item"><a href="home.html" class="nav__link">Главная</a></li>
+            <li class="nav__item"><a href="about-us.html" class="nav__link nav__link_active">О нас</a></li>
+            <li class="nav__item"><a href="list-products.html" class="nav__link">Товары</a></li>
+            <li class="nav__item"><a href="services.html" class="nav__link">Услуги</a></li>
+            <li class="nav__item"><a href="contacts.html" class="nav__link">Контакты</a></li>
+          </ul>
+        </nav>
+        <div class="header__search search"><a class="search__open"></a>
+          <form class="search__form">
+            <input type="text" placeholder="Что вы ищите?" class="search__input"><a class="search__close"></a>
+          </form>
+        </div>
+        <div class="header__sep"></div>
+        <div class="header__lang lang">
+          <div class="lang__open">
+            <div class="lang__title">RU</div>
+            <div class="lang__cunt"></div>
+          </div>
+          <ul class="lang__list">
+            <li class="lang__item"><a href="#" class="lang__link">EN</a></li>
+          </ul>
+        </div>
+        <div class="mobile-nav mobile-nav_first">
+          <div class="mobile-nav__button mobile-nav__button_search"></div>
+          <form class="mobile-nav__search">
+            <input type="text" placeholder="Что вы ищите?" class="mobile-nav__input">
+          </form>
+        </div>
+        <div class="mobile-nav">
+          <div class="mobile-nav__button mobile-nav__button_menu"></div>
+          <ul class="mobile-nav__menu-list">
+            <li class="mobile-nav__menu-item"><a href="home.html" class="mobile-nav__menu-link">Главная</a></li>
+            <li class="mobile-nav__menu-item"><a href="about-us.html" class="mobile-nav__menu-link mobile-nav__menu-link_active">О нас</a></li>
+            <li class="mobile-nav__menu-item"><a href="list-products.html" class="mobile-nav__menu-link">Товары</a>
+              <ul class="mobile-nav__submenu">
+                <li class="mobile-nav__submenu-item"><a class="mobile-nav__submenu-link">Сельхозтехника</a></li>
+                <li class="mobile-nav__submenu-item"><a class="mobile-nav__submenu-link">Спецтехника</a></li>
+                <li class="mobile-nav__submenu-item"><a class="mobile-nav__submenu-link">Грузовая техника</a></li>
+                <li class="mobile-nav__submenu-item"><a class="mobile-nav__submenu-link">Запчасти</a></li>
+              </ul>
+            </li>
+            <li class="mobile-nav__menu-item"><a href="services.html" class="mobile-nav__menu-link">Услуги</a></li>
+            <li class="mobile-nav__menu-item"><a href="contacts.html" class="mobile-nav__menu-link">Контакты</a></li>
+            <li class="mobile-nav__menu-item"><a class="mobile-nav__menu-link">RU</a>
+              <ul class="mobile-nav__submenu">
+                <li class="mobile-nav__submenu-item"><a class="mobile-nav__submenu-link">EN</a></li>
+                <li class="mobile-nav__submenu-item"></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <section class="page-head page-head_about-us"></section>
+    <section class="page about-us">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-9 col-md-8">
+            <h3 class="green">Кто мы?</h3>
+            <div class="about-us__intro">
+              <p>Компания «Технодвор» является поставщиком качественных решений для бизнеса в области сельскохозяйственной, автомобильной и специальной техники в сфере тяжелой и легкой промышленности. Наравне с продажей техники и оборудования мы оказываем консультационные и посреднические услуги. Опыт наших сотрудников в профессиональной области составляет более 15 лет. Миссия нашей компании – сохранить Ваше время и принести пользу Вашему бизнесу. Наша важнейшая задача – продвижение качественных белорусских брендов на рынках зарубежных стран. Мы предлагаем только те товары и услуги, которые приносят выгоду и экономят ресурсы.</p>
+              <p>В эпоху стремительного развития, технологический прогресс каждый год предлагает новейшие техническое оборудование, для ускорения решения все более широких задач. На сегодняшний день в мире существует огромное количество продуктов и потребителю все тяжелее сделать правильный выбор, который как нельзя лучше подойдет для решения его задачи и достижению желаемого результата. Обращайтесь в «Технодвор» – и мы подберем для Вас именно такой!</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4">
+            <div class="about-us__side about-us__side_contacts">
+              <p class="about-us__side-text">Заполните форму и свяжитесь с нами</p><a href="contacts.html" class="btn btn_green">Связаться</a>
+            </div>
+            <div class="about-us__side about-us__side_services">
+              <p class="about-us__side-text">Узнайте больше о наших услугах</p><a href="services.html" class="btn btn_green">Узнать</a>
+            </div>
+          </div>
+        </div>
+        <div class="about-us__content">
+          <h3 class="green bordered">4 причины, по которым Вам выгодно обратиться к нам:</h3>
+          <div class="row">
+            <div class="col-md-6">
+              <h4 class="about-us__service">1. Каждый клиент для нас – это маленький «проект»</h4>
+              <p>Мы ведем его от начала и до конца, корректируем в зависимости от условий и на выходе каждая сторона получает ценность и пользу. Если у Вас возникнут вопросы, Вы можете оперативно получить на них ответы, связавшись с нашими специалистами. Воспользуйтесь бесплатной консультацией, отправив запрос «перезвоните мне». Мы оперативно подберём необходимую продукцию. Мы также берём организацию последующей доставки и все процедуры таможенного оформления на себя.</p>
+            </div>
+            <div class="col-md-6">
+              <h4 class="about-us__service">2. Широкий ассортимент продукции</h4>
+              <p>В разделе "Товары и услуги" Вы можете ознакомиться с полным перечнем грузовых автомобилей, самосвалов, тракторов, пресс-подборщиков, погрузчиков и другими видами сельскохозяйственной, автомобильной и специальной техники, на которой мы специализируемся. Мы также осуществляем продажу фирменных запасных частей для всей продукции, представленной в каталоге. </p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <h4 class="about-us__service">3. Доставка за пределы Республики Беларусь</h4>
+              <p>Мы осуществляем доставку в любую точку мира. За 10 лет работы с партнерскими транспортными компаниями мы довели процессы поставки практически до автоматизма, что позволяет доставлять технику в кратчайшие сроки. Мы полностью доверяем транспортным компаниям, с которыми сотрудничаем, и можем поручиться за целостность и сохранность поставки. </p>
+            </div>
+            <div class="col-md-6">
+              <h4 class="about-us__service">4. Квалифицированные специалисты</h4>
+              <p>Наша команда собрана из специалистов с разных стран, которые разговаривают на 6 языках мира, что позволяет нам строить бизнес с зарубежными партнерами.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="offers">
+      <div class="container"><a href="#">
+          <h3 class="bordered link">Акции и спецпредложения</h3></a>
+        <ul class="offers__list">
+          <li class="offers__item">
+            <div style="background-image: url('images/offers/01.png');" class="offer">
+              <div class="offer__title">Распродажа техники</div>
+              <div class="offer__sale">скидка 15%</div>
+            </div>
+          </li>
+          <li class="offers__item">
+            <div style="background-image: url('images/offers/02.png');" class="offer">
+              <div class="offer__title">Распродажа техники</div>
+              <div class="offer__sale">скидка 15%</div>
+            </div>
+          </li>
+          <li class="offers__item">
+            <div style="background-image: url('images/offers/03.png');" class="offer">
+              <div class="offer__title">Распродажа техники</div>
+              <div class="offer__sale">скидка 15%</div>
+            </div>
+          </li>
+          <li class="offers__item">
+            <div style="background-image: url('images/offers/04.png');" class="offer">
+              <div class="offer__title">Распродажа техники</div>
+              <div class="offer__sale">скидка 15%</div>
+            </div>
+          </li>
+          <li class="offers__item">
+            <div style="background-image: url('images/offers/01.png');" class="offer">
+              <div class="offer__title">Распродажа техники</div>
+              <div class="offer__sale">скидка 15%</div>
+            </div>
+          </li>
+          <li class="offers__item">
+            <div style="background-image: url('images/offers/02.png');" class="offer">
+              <div class="offer__title">Распродажа техники</div>
+              <div class="offer__sale">скидка 15%</div>
+            </div>
+          </li>
+          <li class="offers__item">
+            <div style="background-image: url('images/offers/03.png');" class="offer">
+              <div class="offer__title">Распродажа техники</div>
+              <div class="offer__sale">скидка 15%</div>
+            </div>
+          </li>
+          <li class="offers__item">
+            <div style="background-image: url('images/offers/04.png');" class="offer">
+              <div class="offer__title">Распродажа техники</div>
+              <div class="offer__sale">скидка 15%</div>
+            </div>
+          </li>
+          <li class="offers__item">
+            <div style="background-image: url('images/offers/01.png');" class="offer">
+              <div class="offer__title">Распродажа техники</div>
+              <div class="offer__sale">скидка 15%</div>
+            </div>
+          </li>
+          <li class="offers__item">
+            <div style="background-image: url('images/offers/02.png');" class="offer">
+              <div class="offer__title">Распродажа техники</div>
+              <div class="offer__sale">скидка 15%</div>
+            </div>
+          </li>
+          <li class="offers__item">
+            <div style="background-image: url('images/offers/03.png');" class="offer">
+              <div class="offer__title">Распродажа техники</div>
+              <div class="offer__sale">скидка 15%</div>
+            </div>
+          </li>
+          <li class="offers__item">
+            <div style="background-image: url('images/offers/04.png');" class="offer">
+              <div class="offer__title">Распродажа техники</div>
+              <div class="offer__sale">скидка 15%</div>
+            </div>
+          </li>
+          <li class="offers__item">
+            <div style="background-image: url('images/offers/01.png');" class="offer">
+              <div class="offer__title">Распродажа техники</div>
+              <div class="offer__sale">скидка 15%</div>
+            </div>
+          </li>
+          <li class="offers__item">
+            <div style="background-image: url('images/offers/02.png');" class="offer">
+              <div class="offer__title">Распродажа техники</div>
+              <div class="offer__sale">скидка 15%</div>
+            </div>
+          </li>
+          <li class="offers__item">
+            <div style="background-image: url('images/offers/03.png');" class="offer">
+              <div class="offer__title">Распродажа техники</div>
+              <div class="offer__sale">скидка 15%</div>
+            </div>
+          </li>
+          <li class="offers__item">
+            <div style="background-image: url('images/offers/04.png');" class="offer">
+              <div class="offer__title">Распродажа техники</div>
+              <div class="offer__sale">скидка 15%</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <div class="partners">
+      <div class="container">
+        <ul class="partners__list">
+          <div class="partners__item">
+            <div class="partners__slide"><img src="images/partners/1.png" alt=""></div>
+          </div>
+          <div class="partners__item">
+            <div class="partners__slide"><img src="images/partners/2.png" alt=""></div>
+          </div>
+          <div class="partners__item">
+            <div class="partners__slide"><img src="images/partners/3.png" alt=""></div>
+          </div>
+          <div class="partners__item">
+            <div class="partners__slide"><img src="images/partners/4.png" alt=""></div>
+          </div>
+          <div class="partners__item">
+            <div class="partners__slide"><img src="images/partners/5.png" alt=""></div>
+          </div>
+          <div class="partners__item">
+            <div class="partners__slide"><img src="images/partners/6.png" alt=""></div>
+          </div>
+          <div class="partners__item">
+            <div class="partners__slide"><img src="images/partners/7.png" alt=""></div>
+          </div>
+          <div class="partners__item">
+            <div class="partners__slide"><img src="images/partners/8.png" alt=""></div>
+          </div>
+          <div class="partners__item">
+            <div class="partners__slide"><img src="images/partners/9.png" alt=""></div>
+          </div>
+          <div class="partners__item">
+            <div class="partners__slide"><img src="images/partners/10.png" alt=""></div>
+          </div>
+          <div class="partners__item">
+            <div class="partners__slide"><img src="images/partners/11.png" alt=""></div>
+          </div>
+          <div class="partners__item">
+            <div class="partners__slide"><img src="images/partners/12.png" alt=""></div>
+          </div>
+          <div class="partners__item">
+            <div class="partners__slide"><img src="images/partners/13.png" alt=""></div>
+          </div>
+          <div class="partners__item">
+            <div class="partners__slide"><img src="images/partners/15.png" alt=""></div>
+          </div>
+          <div class="partners__item">
+            <div class="partners__slide"><img src="images/partners/14.png" alt=""></div>
+          </div>
+          <div class="partners__item">
+            <div class="partners__slide"><img src="images/partners/16.png" alt=""></div>
+          </div>
+          <div class="partners__item">
+            <div class="partners__slide"><img src="images/partners/17.png" alt=""></div>
+          </div>
+        </ul>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="footer__form">
+        <h4 class="footer__form-title">Контактная форма</h4>
+        <form class="contacts-form"><span class="contacts-form__error">Обязательные поля содержат ошибку. Проверьте и попробуйте снова.</span>
+          <fieldset class="contacts-form__fieldset">
+            <input type="text" placeholder="Имя*" class="contacts-form__input contacts-form__input-name">
+          </fieldset>
+          <fieldset class="contacts-form__fieldset contacts-form__fieldset_error">
+            <input type="text" placeholder="Email*" class="contacts-form__input contacts-form__input-email">
+          </fieldset>
+          <fieldset class="contacts-form__fieldset">
+            <input type="text" placeholder="Телефон" class="contacts-form__input contacts-form__input-phone">
+          </fieldset>
+          <fieldset class="contacts-form__fieldset">
+            <input type="text" placeholder="Тема" class="contacts-form__input contacts-form__input-subject">
+          </fieldset>
+          <fieldset class="contacts-form__fieldset">
+            <textarea placeholder="Ваше сообщение"></textarea>
+          </fieldset>
+          <fieldset class="contacts-form__fieldset align-right">
+            <input type="submit" value="Отправить" class="btn btn_transparent">
+          </fieldset>
+        </form>
+      </div>
+      <div class="footer__contacts">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4 footer__contacts-item">
+              <div class="footer__icon footer__icon_phone"></div>
+              <table>
+                <tr>
+                  <td>Тел:</td>
+                  <td>+375 17 231 56 56</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>+375 17 231 57 57</td>
+                </tr>
+                <tr>
+                  <td>Факс:</td>
+                  <td>+375 17 231 31 25</td>
+                </tr>
+              </table>
+            </div>
+            <div class="col-md-4 footer__contacts-item">
+              <div class="footer__icon footer__icon_address"></div>
+              <table>
+                <tr>
+                  <td>220040, Минск</td>
+                </tr>
+                <tr>
+                  <td>ул. Кирова, 8-4, офис 45</td>
+                </tr>
+              </table>
+            </div>
+            <div class="col-md-4 footer__contacts-item">
+              <div class="footer__icon footer__icon_time"></div>
+              <table>
+                <tr>
+                  <td>Пн - Пт:</td>
+                  <td>8.00 - 22.00</td>
+                </tr>
+                <tr>
+                  <td>Суб - Вс:</td>
+                  <td>8.00 - 22.00</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="map" class="footer__map"></div>
+      <div class="footer__copy">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="footer__copy-inner"><span>© 2016 ООО “Технодвор” </span><span>Разработка сайта - <a href="#">Meldgraphics</a></span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script>
+        function initMap() {
+        var coord = {lat: 53.894957, lng: 27.555690};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 17,
+          center: coord,
+          disableDefaultUI: true,
+          scrollwheel: false
+        });
+        var marker = new google.maps.Marker({
+          position: coord,
+          map: map
+        });
+        }
+      </script>
+      <script async="" defer="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBowPUp3JBYhntZ3j5wDx8IkeO_trXMzZA&amp;callback=initMap"></script>
+    </footer>
+    <script src="js/app.js"></script>
+  </body>
+</html>

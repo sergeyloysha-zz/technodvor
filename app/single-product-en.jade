@@ -1,0 +1,238 @@
+extends templates/base
+
+block content
+  header.header
+    .header__inner
+      a.header__logo.logo(href='home.html')
+        img(src="images/logo.svg").logo__src
+      nav.header__nav.nav
+        ul.nav__list
+          li.nav__item
+            a.nav__link(href="home.html") Главная
+          li.nav__item
+            a.nav__link(href="about-us.html") О нас
+          li.nav__item
+            a.nav__link.nav__link_active(href="list-products.html") Товары
+          li.nav__item
+            a.nav__link(href="services.html") Услуги
+          li.nav__item
+            a.nav__link(href="contacts.html") Контакты
+      .header__search.search
+        a.search__open
+        form.search__form
+          input(type="text", placeholder="Что вы ищите?").search__input
+          a.search__close
+      .header__sep
+      .header__lang.lang
+        .lang__open
+          .lang__title RU
+          .lang__cunt
+        ul.lang__list
+          li.lang__item
+            a.lang__link(href="#") EN
+      .mobile-nav.mobile-nav_first
+        .mobile-nav__button.mobile-nav__button_search
+        form.mobile-nav__search
+          input.mobile-nav__input(type="text", placeholder="Что вы ищите?")
+      .mobile-nav
+        .mobile-nav__button.mobile-nav__button_menu
+        ul.mobile-nav__menu-list
+          li.mobile-nav__menu-item
+            a.mobile-nav__menu-link(href="home.html") Главная
+          li.mobile-nav__menu-item
+            a.mobile-nav__menu-link(href="about-us.html") О нас
+          li.mobile-nav__menu-item
+            a.mobile-nav__menu-link.mobile-nav__menu-link_active(href="list-products.html") Товары
+            ul.mobile-nav__submenu
+              li.mobile-nav__submenu-item
+                a.mobile-nav__submenu-link Сельхозтехника
+              li.mobile-nav__submenu-item
+                a.mobile-nav__submenu-link Спецтехника
+              li.mobile-nav__submenu-item
+                a.mobile-nav__submenu-link Грузовая техника
+              li.mobile-nav__submenu-item
+                a.mobile-nav__submenu-link Запчасти
+          li.mobile-nav__menu-item
+            a.mobile-nav__menu-link(href="services.html") Услуги
+          li.mobile-nav__menu-item
+            a.mobile-nav__menu-link(href="contacts.html") Контакты
+          li.mobile-nav__menu-item
+            a.mobile-nav__menu-link RU
+            ul.mobile-nav__submenu
+              li.mobile-nav__submenu-item
+                a.mobile-nav__submenu-link EN
+              li.mobile-nav__submenu-item
+  section.page-head.page-head_products
+  section.page.page__products.products
+    section.controls
+      .container
+        .controls__inner
+          a.control-back.btn.btn_gt(href="#") Вернуться к категориям
+          .control-page
+            a.control-page__item.control-page__item_prev(href="#")
+            a.control-page__item.control-page__item_next(href="#")
+    section.product
+      .container
+        .row
+          .col-md-6
+            .product__slider
+              .product__slider-sale Акция
+              .fotorama(data-nav="thumbs", data-allowfullscreen="true")
+                a.product__slider-slide(href="//placehold.it/800x600")
+                  span asd
+                  img(src="//placehold.it/800x600")
+                a.product__slider-slide(href="//placehold.it/1000x500")
+                  img(src="//placehold.it/1000x500")
+          .col-md-6
+            .product__info
+              h2.product__name Belarus 1220.6
+              .product__details
+                .product__detail
+                  span.product__detail-item Бренд:
+                  span.product__detail-value Minsk Tractor Works
+                .product__detail
+                  span.product__detail-item Номер продукта:
+                  span.product__detail-value 02551059845
+                .product__detail
+                  span.product__detail-item Наличие:
+                  span.product__detail-value.product__detail-value_green В наличии
+                .product__detail
+                  span.product__detail-item Наличие:
+                  span.product__detail-value.product__detail-value_red Нет в наличии
+              .product__sale
+                span.product__sale-title Акция:
+                p.product__sale-description Предназначен для выполнения различных сельскохозяйственных работ с навесными, полунавесными и прицепными машинами, на транспорте, с погрузочно-разгрузочными средствами, уборочными комплексами и для привода стационарных сельскохозяйственных машин. Предназначен для выполнения различных сельскохозяйственных работ.
+              p.product__description Трактор БЕЛАРУС-1221.2 (4×4) относится к тяговому классу 2,0 с двигателем мощностью 130 л.с. Предназначен для выполнения различных сельскохозяйственных работ с навесными, полунавесными и прицепными машинами, на транспорте, с погрузочно-разгрузочными средствами, уборочными комплексами и для привода стационарных сельскохозяйственных машин. 
+              .product__control
+                a.btn.btn_red.btn_large(href="#order") Заказать
+        .row
+          .col-md-12
+            .tabs
+              input#tab1(type='radio', name='tabs', checked='')
+              label(for='tab1') Описание
+              input#tab2(type='radio', name='tabs')
+              label(for='tab2') Характеристики
+              input#tab3(type='radio', name='tabs')
+              label(for='tab3') Преимущества
+              section#content-tab1
+                p Трактор БЕЛАРУС-1221.2 (4×4) относится к тяговому классу 2,0 с двигателем мощностью 130 л.с. Предназначен для выполнения различных сельскохозяй ственных работ с навесными, полунавесными и прицепными машинами, на транспорте, с погрузочно-разгрузочными средствами, уборочными комплексами и для привода стационарных сельскохозяйственных машин. Трактор БЕЛАРУС-1221.2 (4×4) относится к тяговому классу 2,0 с двигателем мощностью 130 л.с. Предназначен для выполнения различных сельскохозяй ственных работ с навесными, полунавесными и прицепными машинами, на транспорте, с погрузочно-разгрузочными средствами, уборочными комплексами и для привода стационарных сельскохозяйственных машин. 
+                p Трактор БЕЛАРУС-1221.2 (4×4) относится к тяговому классу 2,0 с двигателем мощностью 130 л.с. Предназначен для выполнения различных сельскохозяй ственных работ с навесными, полунавесными и прицепными машинами, на транспорте, с погрузочно-разгрузочными средствами, уборочными комплексами и для привода стационарных сельскохозяйственных машин. 
+              section#content-tab2
+                .b-options
+                  .b-option.b-options__item
+                    .b-option__title.b-option__title_active Общие данные
+                    .b-option__list(style="display:block;")
+                      .b-option__item
+                        .b-option__item-name Масса конструкционная, кг
+                        .b-option__item-value 5080
+                      .b-option__item
+                        .b-option__item-name Масса в состоянии отгрузки с завода, кг
+                        .b-option__item-value 5080
+                      .b-option__item
+                        .b-option__item-name Масса конструкционная, кг
+                        .b-option__item-value 5080
+                      .b-option__item
+                        .b-option__item-name Масса в состоянии отгрузки с завода, кг
+                        .b-option__item-value 5080
+                      .b-option__item
+                        .b-option__item-name Масса конструкционная, кг
+                        .b-option__item-value 5080
+                  .b-option.b-options__item
+                    .b-option__title Общие данные
+                    .b-option__list
+                      .b-option__item
+                        .b-option__item-name Масса конструкционная, кг
+                        .b-option__item-value 5080
+                      .b-option__item
+                        .b-option__item-name Масса в состоянии отгрузки с завода, кг
+                        .b-option__item-value 5080
+                      .b-option__item
+                        .b-option__item-name Масса конструкционная, кг
+                        .b-option__item-value 5080
+                      .b-option__item
+                        .b-option__item-name Масса в состоянии отгрузки с завода, кг
+                        .b-option__item-value 5080
+                      .b-option__item
+                        .b-option__item-name Масса конструкционная, кг
+                        .b-option__item-value 5080
+                  .b-option.b-options__item
+                    .b-option__title Общие данные
+                    .b-option__list
+                      .b-option__item
+                        .b-option__item-name Масса конструкционная, кг
+                        .b-option__item-value 5080
+                      .b-option__item
+                        .b-option__item-name Масса в состоянии отгрузки с завода, кг
+                        .b-option__item-value 5080
+                      .b-option__item
+                        .b-option__item-name Масса конструкционная, кг
+                        .b-option__item-value 5080
+                      .b-option__item
+                        .b-option__item-name Масса в состоянии отгрузки с завода, кг
+                        .b-option__item-value 5080
+                      .b-option__item
+                        .b-option__item-name Масса конструкционная, кг
+                        .b-option__item-value 5080
+                  .b-option.b-options__item
+                    .b-option__title Общие данные
+                    .b-option__list
+                      .b-option__item
+                        .b-option__item-name Масса конструкционная, кг
+                        .b-option__item-value 5080
+                      .b-option__item
+                        .b-option__item-name Масса в состоянии отгрузки с завода, кг
+                        .b-option__item-value 5080
+                      .b-option__item
+                        .b-option__item-name Масса конструкционная, кг
+                        .b-option__item-value 5080
+                      .b-option__item
+                        .b-option__item-name Масса в состоянии отгрузки с завода, кг
+                        .b-option__item-value 5080
+                      .b-option__item
+                        .b-option__item-name Масса конструкционная, кг
+                        .b-option__item-value 5080
+                  .b-option.b-options__item
+                    .b-option__title Общие данные
+                    .b-option__list
+                      .b-option__item
+                        .b-option__item-name Масса конструкционная, кг
+                        .b-option__item-value 5080
+                      .b-option__item
+                        .b-option__item-name Масса в состоянии отгрузки с завода, кг
+                        .b-option__item-value 5080
+                      .b-option__item
+                        .b-option__item-name Масса конструкционная, кг
+                        .b-option__item-value 5080
+                      .b-option__item
+                        .b-option__item-name Масса в состоянии отгрузки с завода, кг
+                        .b-option__item-value 5080
+                      .b-option__item
+                        .b-option__item-name Масса конструкционная, кг
+                        .b-option__item-value 5080
+                
+              section#content-tab3
+                p
+                  | HTML5 (англ. HyperText Markup Language, version 5) — язык для структурирования и представления содержимого всемирной паутины. Это пятая версия HTML, последняя (четвёртая) версия которого была стандартизирована в 1997 году. По состоянию на октябрь 2013 года, HTML5 ещё находится в разработке, но, фактически, является рабочим стандартом (англ. HTML Living Standard). Цель разработки HTML5 — улучшение уровня поддержки мультимедиа-технологий, сохраняя при этом удобочитаемость кода для человека и простоту анализа для парсеров.
+                p
+                  | Во всемирной паутине долгое время использовались стандарты HTML 4.01 и XHTML 1.1, и веб-страницы на практике оказывались свёрстаны с использованием смеси особенностей, представленных различными спецификациями, включая спецификации программных продуктов, например веб-браузеров, а также сложившихся общеупотребительных приёмов. HTML5 был создан, как единый язык разметки, который мог бы сочетать синтаксические нормы HTML и XHTML. Он расширяет, улучшает и рационализирует разметку документов, а также добавляет единое API для сложных веб-приложений.
+
+  include templates/offers
+  include templates/partners
+  .remodal(data-remodal-id='order')
+    button.remodal-close(data-remodal-action='close')
+    .order
+      .order__title Belarus 1220.6
+      form.contacts-form.contacts-form_dark
+        fieldset.contacts-form__fieldset
+          input(type="text", placeholder="Имя*").contacts-form__input.contacts-form__input-name-d
+        fieldset.contacts-form__fieldset
+          input(type="text", placeholder="Email*").contacts-form__input.contacts-form__input-email-d
+        fieldset.contacts-form__fieldset
+          input(type="text", placeholder="Телефон*").contacts-form__input.contacts-form__input-phone-d
+        fieldset.contacts-form__fieldset
+          input(type="text", placeholder="Тема*").contacts-form__input.contacts-form__input-subject-d
+        fieldset.contacts-form__fieldset
+          textarea(placeholder="Ваше сообщение")
+        fieldset.contacts-form__fieldset
+          input(type="submit", value="Отправить").btn.btn_green.btn_full
+  include templates/footer
