@@ -432,8 +432,13 @@
             <textarea placeholder="Ваше сообщение"></textarea>
           </fieldset>
           <fieldset class="contacts-form__fieldset">
-            <input type="file">
-            <span>Вы можете приложить любые документы (например, список требуемых позиций)</span>
+            <div class="contacts-form__fieldset-half">
+              <a href="#file" class="contacts-form__file">+ Приложить файл</a>
+              <input type="file">
+            </div>
+            <div class="contacts-form__fieldset-half">
+              <span class="contacts-form__file-desc">Вы можете приложить любые документы (например, список требуемых позиций)</span>
+            </div>
           </fieldset>
           <fieldset class="contacts-form__fieldset">
             <input type="submit" value="Отправить" class="btn btn_green btn_full">
