@@ -2722,6 +2722,25 @@ strong {
   border-radius: 50%;
   font-weight: 700;
 }
+
+.contacts-form__half + .contacts-form__half {
+  float: right;
+  width: 60%;
+}
+
+.contacts-form__file {
+  font-size: 28px:
+  color: #498f43;
+  border-bottom: 1px solid rgba(73, 143, 67, 0.6);
+}
+
+.contacts-form__file-desc {
+  font-weight: 500;
+  font-size: 1.5rem;
+  color: #3c4d5f;
+  margin: 0;
+}
+
 .contacts-form__fieldset {
   margin: 0 0 1rem 0;
   padding: 0;
