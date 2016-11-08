@@ -2727,13 +2727,18 @@ strong {
   display: none;
 }
 
+.contacts-form__fieldset-half {
+  float: left;
+}
+
 .contacts-form__fieldset-half + .contacts-form__fieldset-half {
   float: right;
-  width: 60%;
+  width: 50%;
 }
 
 .contacts-form__file {
-  font-size: 28px;
+  font-size: 18px;
+  font-weight: 600;
   color: #498f43;
   border-bottom: 1px solid rgba(73, 143, 67, 0.6);
 }
