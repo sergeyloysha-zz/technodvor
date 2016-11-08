@@ -157,5 +157,10 @@ $(function() {
       $(this).next().slideUp('slow');
     }
   });
+  
+  $('.contacts-form__file').on('click', function(e){
+    e.preventDefault();
+    $(this).next().trigger('click');
+  });
 
 });
