@@ -2733,7 +2733,7 @@ strong {
 
 .contacts-form__fieldset-half + .contacts-form__fieldset-half {
   float: right;
-  width: 50%;
+  width: 60%;
 }
 
 .contacts-form__file {
