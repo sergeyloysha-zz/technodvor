@@ -2723,6 +2723,10 @@ strong {
   font-weight: 700;
 }
 
+.contacts-form__half input {
+  display: none;
+}
+
 .contacts-form__half + .contacts-form__half {
   float: right;
   width: 60%;
