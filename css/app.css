@@ -4396,3 +4396,16 @@ strong {
 .b-option__item-value {
   width: 30%;
 }
+
+@media screen and (min-width: 992px) {
+  .nav-mobile {
+    display: none;
+  }
+}
+.nav-mobile__title {
+    font-size: 1.8rem;
+    color: #fff;
+    padding: 1.5rem 2.5rem;
+    background: #498f43;
+    font-weight: 600;
+}
